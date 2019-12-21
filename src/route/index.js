@@ -1,15 +1,21 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { GlobalStyle } from '../globalStyle'
+import Header from '../components/Header'
+import Root from '../pages/Root'
 import theme from '../globalStyle/theme'
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 export default function App() {
   return (
-    // <Router>
-    //   <Switch>
-    //     <Route path="/" exact component={<div>안녕</div>} />
-    //   </Switch>
-    // </Router>
-    <ThemeProvider theme={theme}>안녕</ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Root} />
+        </Switch>
+      </Router>
+    </ThemeProvider>
   )
 }
