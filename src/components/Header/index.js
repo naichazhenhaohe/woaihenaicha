@@ -1,12 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const StyledHeader = styled.header`
-  height: 48px;
-  line-height: 48px;
-  
-`
+import { StyledHeader, Text, Logo, Content, NavList, NavItem } from './style'
 
 export default function Header() {
-  return <StyledHeader>안년하세요.</StyledHeader>
+  return (
+    <StyledHeader>
+      <Content>
+        <NavList>
+          <Logo>
+            <Text>As We Did</Text>
+          </Logo>
+          <NavItem index="1">Now</NavItem>
+          <NavItem index="2">aBout</NavItem>
+          <NavItem index="3">taGs</NavItem>
+          <NavItem index="4">catEgories</NavItem>
+        </NavList>
+      </Content>
+    </StyledHeader>
+  )
 }
