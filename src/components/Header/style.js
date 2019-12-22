@@ -105,7 +105,7 @@ const NavItem = styled.nav`
   align-items: center;
   margin: 0 15px;
   height: 32px;
-  color: #ff7755;
+  color: ${props=>props.theme.colors.logo};
   cursor: pointer;
   z-index: 1;
   &::before {
@@ -114,7 +114,7 @@ const NavItem = styled.nav`
     width: ${props => (props.index === '1' || props.index === '3' ? '0px' : '120px')};
     height: ${props => (props.index === '1' || props.index === '3' ? '32px' : '0px')};
     transition: 0.4s all ease;
-    background: #f27059;
+    background: ${props=>props.theme.colors.logo};
     ${props => {
       switch (props.index) {
         case '2':
@@ -127,13 +127,11 @@ const NavItem = styled.nav`
           return { left: 0 }
       }
     }}
-    right: 0;
     z-index: -1;
   }
   &:hover {
     color: white;
     &::before {
-      width: 100%;
       ${props => {
         if (props.index === '2' || props.index === '4') {
           return { height: '100%' }
