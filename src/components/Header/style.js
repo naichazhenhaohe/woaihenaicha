@@ -18,75 +18,75 @@ const Content = styled.div`
   padding: 0 16px;
 `
 
-const Logo = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  color: ${props => props.theme.colors.logo};
-  padding: 0 12px;
-  cursor: pointer;
-  &:before,
-  &:after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: ${props => props.theme.colors.logo};
-    transition: 0.4s all ease;
-  }
-  &:before {
-    top: 0;
-  }
-  &:after {
-    bottom: 0;
-  }
-  &:hover:before,
-  &:hover:after {
-    transition: 0.4s all ease;
-  }
-  &:hover:before {
-    transform: translateY(-6px);
-  }
-  &:hover:after {
-    transform: translateY(6px);
-  }
-  &:hover div {
-    color: white;
-  }
-  &:hover div:before,
-  &:hover div:after {
-    width: 100%;
-    transition: 0.4s all ease;
-  }
-`
+// const Logo = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: relative;
+//   color: ${props => props.theme.colors.logo};
+//   padding: 0 12px;
+//   cursor: pointer;
+//   &:before,
+//   &:after {
+//     position: absolute;
+//     content: '';
+//     width: 100%;
+//     height: 2px;
+//     background: ${props => props.theme.colors.logo};
+//     transition: 0.4s all ease;
+//   }
+//   &:before {
+//     top: 0;
+//   }
+//   &:after {
+//     bottom: 0;
+//   }
+//   &:hover:before,
+//   &:hover:after {
+//     transition: 0.4s all ease;
+//   }
+//   &:hover:before {
+//     transform: translateY(-6px);
+//   }
+//   &:hover:after {
+//     transform: translateY(6px);
+//   }
+//   &:hover div {
+//     color: white;
+//   }
+//   &:hover div:before,
+//   &:hover div:after {
+//     width: 100%;
+//     transition: 0.4s all ease;
+//   }
+// `
 
-const Text = styled.div`
-  letter-spacing: 2px;
-  font-size: 14px;
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s all ease;
-  &:before,
-  &:after {
-    position: absolute;
-    top: 0;
-    content: '';
-    height: 100%;
-    width: 2px;
-    background: ${props => props.theme.colors.logo};
-    transition: 0.4s all ease;
-    z-index: -1;
-  }
-  &:before {
-    left: 0;
-  }
-  &:after {
-    right: 0;
-  }
-`
+// const Text = styled.div`
+//   letter-spacing: 2px;
+//   font-size: 14px;
+//   z-index: 99;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   transition: 0.4s all ease;
+//   &:before,
+//   &:after {
+//     position: absolute;
+//     top: 0;
+//     content: '';
+//     height: 100%;
+//     width: 2px;
+//     background: ${props => props.theme.colors.logo};
+//     transition: 0.4s all ease;
+//     z-index: -1;
+//   }
+//   &:before {
+//     left: 0;
+//   }
+//   &:after {
+//     right: 0;
+//   }
+// `
 
 const NavList = styled.div`
   display: flex;
@@ -142,4 +142,4 @@ const NavItem = styled.nav`
   }
 `
 
-export { StyledHeader, Text, Logo, Content, NavList, NavItem }
+export { StyledHeader, Content, NavList, NavItem }

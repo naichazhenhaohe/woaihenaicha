@@ -1,28 +1,35 @@
 import React from 'react'
 import Content from '@/articles/2019 yearly review.md'
-import Markdown from 'markdown-to-jsx'
+import { Main, Title, TagBox, Tag, StyledMarkdown, H1, H2, Paragraph } from './style'
 
 export default function Root() {
   const content = Content.split('---')
-  const option = content[0]
   const main = content[1]
-  console.log(option)
+  const options = content[0].split('\n')
+  const optionsObject = {}
+  for (let item of options) {
+    if (item) {
+      item = item.split(': ')
+      optionsObject[item[0]] = item[1]
+    }
+  }
+  const tags = (optionsObject.tags || optionsObject.tag || '').split(', ')
   return (
-    <main>
-      <Markdown
+    <Main>
+      <Title>{optionsObject.title}</Title>
+      <TagBox>{tags && tags.map((item, index) => <Tag key={index}>{item}</Tag>)}</TagBox>
+      <StyledMarkdown
         options={{
           forceBlock: true,
           overrides: {
-            h1: {
-              props: {
-                className: 'foo'
-              }
-            }
+            h1: H1,
+            h2: H2,
+            p: Paragraph
           }
         }}
       >
         {main}
-      </Markdown>
-    </main>
+      </StyledMarkdown>
+    </Main>
   )
 }

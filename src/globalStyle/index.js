@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 14px;
   }
   body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Comic Sans MS', '微软雅黑', cursive, sans-serif;
     width: 100%;
     height: 100%;
     min-height: 100vh;
