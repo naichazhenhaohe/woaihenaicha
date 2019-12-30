@@ -6,10 +6,18 @@ export default function Header() {
     <StyledHeader>
       <Content>
         <NavList>
-          <NavItem index="1">Now</NavItem>
-          <NavItem index="2">aBout</NavItem>
-          <NavItem index="3">taGs</NavItem>
-          <NavItem index="4">catEgories</NavItem>
+          <NavItem index="1" to="/">
+            feed
+          </NavItem>
+          <NavItem index="2" to="/tags">
+            tags
+          </NavItem>
+          <NavItem index="3" to="/categories">
+            categories
+          </NavItem>
+          <NavItem index="4" to="/about">
+            about
+          </NavItem>
         </NavList>
       </Content>
     </StyledHeader>
