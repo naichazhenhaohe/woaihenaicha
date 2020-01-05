@@ -7,8 +7,8 @@ const theme = {
     white: '#FFFFFF',
     main: '#DDEEFF',
     innerBackground: '#F9F9F9',
-    logo: '#FF7755',
-    navigation: '#99CCFF'
+    navigation: '#FF7755',
+    logo: '#99CCFF'
   }
 }
 

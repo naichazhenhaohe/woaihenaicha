@@ -36,7 +36,7 @@ const NavItem = styled(Link)`
   align-items: center;
   margin: 0 15px;
   height: 32px;
-  color: ${props => props.theme.colors.logo};
+  color: ${props => props.theme.colors.navigation};
   cursor: pointer;
   z-index: 1;
   text-decoration: none;
@@ -46,7 +46,7 @@ const NavItem = styled(Link)`
     width: ${props => (props.index === '1' || props.index === '3' ? '0px' : '120px')};
     height: ${props => (props.index === '1' || props.index === '3' ? '32px' : '0px')};
     transition: 0.4s all ease;
-    background: ${props => props.theme.colors.logo};
+    background: ${props => props.theme.colors.navigation};
     ${props => {
       switch (props.index) {
         case '2':
@@ -74,4 +74,16 @@ const NavItem = styled(Link)`
   }
 `
 
-export { StyledHeader, Content, NavList, NavItem }
+const SelectedNavItem = styled(NavItem)`
+  color: ${props => props.theme.colors.white};
+  transition: 0.5s color ease;
+  &:hover {
+    color: #00ffdd;
+  }
+  &::before {
+    width: 100%;
+    height: 100%;
+  }
+`
+
+export { StyledHeader, Content, NavList, NavItem, SelectedNavItem }
