@@ -59,6 +59,7 @@
     "sass-loader": "8.0.0",
     "semver": "6.3.0",
     "style-loader": "1.0.0",
+    "styled-jsx": "^3.2.4",
     "terser-webpack-plugin": "2.2.1",
     "ts-pnp": "1.1.5",
     "url-loader": "2.3.0",
@@ -88,7 +89,9 @@
     ]
   },
   "devDependencies": {
-    "styled-components": "^4.4.1"
+    "less": "^3.10.3",
+    "styled-components": "^4.4.1",
+    "styled-jsx-plugin-less": "^0.0.1-alpha.2"
   },
   "jest": {
     "roots": [
@@ -143,6 +146,12 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "styled-jsx/babel",
+        { "plugins": ["styled-jsx-plugin-less"] }
+      ]
     ]
   }
 }
