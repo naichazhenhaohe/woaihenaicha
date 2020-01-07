@@ -1,9 +1,3 @@
-tag: review, 2019
-title: 2019 Yearly Review
-time: 2019-12-29
-
----
-
 今年也是！  
 挺无聊的一年  
 有在很努力地活着ㄟ  
