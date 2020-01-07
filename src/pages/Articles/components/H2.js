@@ -10,7 +10,7 @@ export default function H2({ children, ...props }) {
             position: relative;
             color: #333333;
             font-weight: 600;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-family: 'Comic Sans MS', '楷体', cursive, sans-serif;
             margin: 10px 0;
             &:after {

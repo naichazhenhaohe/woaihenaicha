@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Markdown from 'markdown-to-jsx'
+import Prism from 'prismjs'
 import H1 from './components/H1'
 import H2 from './components/H2'
+import H3 from './components/H3'
 import Paragraph from './components/Paragraph'
 import Blockquote from './components/Blockquote'
+import A from './components/A'
+import Ol from './components/Ol'
+import Ul from './components/Ul'
+import InlineCode from './components/InlineCode'
 
 export default function Root(props) {
   const { state } = props.location
   const MAIN = require(`@/articles/${state.name}.md`).default || ''
   const TAGS = state.tags || []
   const TITLE = state.name || ''
-  // 为 markdown 组件注入样式
   const scoped = resolveScopedStyles(
     <scope>
       <style jsx>{`
@@ -29,6 +34,10 @@ export default function Root(props) {
       styles: scope.props.children
     }
   }
+  
+  useEffect(() => {
+    setTimeout(() => Prism.highlightAll(), 0)
+  })
 
   return (
     <main>
@@ -49,8 +58,13 @@ export default function Root(props) {
           overrides: {
             h1: H1,
             h2: H2,
+            h3: H3,
             p: Paragraph,
-            blockquote: Blockquote
+            blockquote: Blockquote,
+            a: A,
+            ol: Ol,
+            ul: Ul,
+            inlineCode: InlineCode
           }
         }}
       />

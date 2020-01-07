@@ -9,7 +9,7 @@ function Feed(props) {
   return (
     <main>
       {root &&
-        root.map((item, index) => (
+        root.reverse().map((item, index) => (
           <article key={index}>
             <div className="title" onClick={() => handleClick(index)}>
               {item.name}
@@ -72,7 +72,7 @@ function Feed(props) {
       <style jsx>{`
         .title {
           &::before {
-            block: 
+            block: ;
           }
         }
       `}</style>
