@@ -7,6 +7,8 @@ import Progress from '@com/Progress'
 import About from '@page/About'
 import Article from '@page/Articles'
 import Feed from '@page/Feed'
+import Tags from '@page/Tags'
+import Categories from '@page/Categories'
 
 export default function App() {
   const history = createBrowserHistory()
@@ -20,6 +22,8 @@ export default function App() {
             <Route path="/" exact component={Feed} />
             <Route path="/about" component={About} />
             <Route path="/article" component={Article} />
+            <Route path="/tags" component={Tags} />
+            <Route path="/categories" component={Categories} />
           </Switch>
         </Router>
       </main>

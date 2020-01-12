@@ -8,17 +8,16 @@ function Feed(props) {
   }
   return (
     <main>
-      {root &&
-        root.reverse().map((item, index) => (
-          <article key={index}>
-            <div className="title" onClick={() => handleClick(index)}>
-              {item.name}
-            </div>
-            <div className="date" onClick={() => handleClick(index)}>
-              {item.date}
-            </div>
-          </article>
-        ))}
+      {root && root.reverse().map((item, index) => (
+        <article key={index}>
+          <div className="title" onClick={() => handleClick(index)}>
+            {item.name}
+          </div>
+          <div className="date" onClick={() => handleClick(index)}>
+            {item.date}
+          </div>
+        </article>
+      ))}
       <style jsx>{`
         main {
           max-width: 800px;

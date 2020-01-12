@@ -1,15 +1,16 @@
 import React, { useEffect } from 'react'
 import Markdown from 'markdown-to-jsx'
 import Prism from 'prismjs'
-import H1 from './components/H1'
-import H2 from './components/H2'
-import H3 from './components/H3'
-import Paragraph from './components/Paragraph'
-import Blockquote from './components/Blockquote'
-import A from './components/A'
-import Ol from './components/Ol'
-import Ul from './components/Ul'
-import InlineCode from './components/InlineCode'
+import H1 from '@com/H1'
+import H2 from '@com/H2'
+import H3 from '@com/H3'
+import Paragraph from '@com/Paragraph'
+import Blockquote from '@com/Blockquote'
+import A from '@com/A'
+import Ol from '@com/Ol'
+import Ul from '@com/Ul'
+import InlineCode from '@com/InlineCode'
+import Img from '@com/Img'
 
 export default function Root(props) {
   const { state } = props.location
@@ -34,7 +35,7 @@ export default function Root(props) {
       styles: scope.props.children
     }
   }
-  
+
   useEffect(() => {
     setTimeout(() => Prism.highlightAll(), 0)
   })
@@ -64,7 +65,8 @@ export default function Root(props) {
             a: A,
             ol: Ol,
             ul: Ul,
-            inlineCode: InlineCode
+            inlineCode: InlineCode,
+            img: Img
           }
         }}
       />

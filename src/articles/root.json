@@ -1,9 +1,27 @@
 [
   {
+    "name": "关于VsCode配置TypeScript",
+    "date": "2019-10-26",
+    "tags": ["VsCode", "TypeScript"],
+    "category": "TypeScript"
+  },
+  {
+    "name": "关于Vue-extend构造器应用",
+    "date": "2019-12-01",
+    "tags": ["VueJs"],
+    "category": "VueJs"
+  },
+  {
+    "name": "关于computed传参",
+    "date": "2019-12-07",
+    "tags": ["VueJs"],
+    "category": "VueJs"
+  },
+  {
     "name": "2019 yearly review",
     "date": "2019-12-29",
     "tags": ["review", "2019"],
-    "category": "review"
+    "category": "Review"
   },
   {
     "name": "Sytled-JSX & PrismJs",
