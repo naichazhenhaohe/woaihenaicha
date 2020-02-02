@@ -1,26 +1,24 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
 import root from '@/articles/root.json'
+import Box from './box'
 
-function Feed(props) {
-  function handleClick(index) {
-    props.history.push('/article', root[index])
-  }
+export default function Feed() {
   return (
     <main>
-      {root && root.reverse().map((item, index) => (
-        <article key={index}>
-          <div className="title" onClick={() => handleClick(index)}>
-            {item.name}
-          </div>
-          <div className="date" onClick={() => handleClick(index)}>
-            {item.date}
-          </div>
-        </article>
-      ))}
+      {root &&
+        root.map((item, index) => (
+          <Box
+            index={index}
+            loca={item.location}
+            name={item.name}
+            date={item.date}
+            tags={item.tags}
+            key={index}
+          />
+        ))}
       <style jsx>{`
         main {
-          max-width: 800px;
+          max-width: 1000px;
           margin: 50px auto;
           padding-bottom: 5vh;
         }
@@ -78,5 +76,3 @@ function Feed(props) {
     </main>
   )
 }
-
-export default withRouter(Feed)

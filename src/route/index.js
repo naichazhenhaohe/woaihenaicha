@@ -29,7 +29,6 @@ export default function App() {
       </main>
       <style jsx>{`
         main {
-          background: #f9f9f9;
           min-height: calc(100vh - 96px);
           padding: 0 25px;
         }
@@ -44,12 +43,15 @@ export default function App() {
           font-size: 14px;
         }
         body {
-          font-family: 'Comic Sans MS', '微软雅黑', cursive, sans-serif;
+          font-family: 'Overpass', '微软雅黑', cursive, sans-serif;
           width: 100%;
           height: 100%;
           min-height: 100vh;
-          padding: 48px;
-          background-color: #ddeeff;
+          background-color: #333333;
+        }
+        ::selection {
+          color: #ffee33;
+          background-color: #aa44ff;
         }
       `}</style>
     </>

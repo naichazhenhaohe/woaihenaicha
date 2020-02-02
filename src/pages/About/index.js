@@ -7,29 +7,10 @@ import Center from '@com/Center'
 
 export default function About() {
   const MAIN = require(`@/articles/about.md`).default || ''
-  const scoped = resolveScopedStyles(
-    <scope>
-      <style jsx>{`
-        .markdown {
-          font-size: 1.2rem;
-          color: #555555;
-          letter-spacing: 1px;
-          cursor: default;
-        }
-      `}</style>
-    </scope>
-  )
-  function resolveScopedStyles(scope) {
-    return {
-      className: scope.props.className,
-      styles: scope.props.children
-    }
-  }
+
   return (
     <main>
-      <header>ABOUT</header>
       <Markdown
-        className={`markdown ${scoped.className}`}
         children={MAIN}
         options={{
           forceBlock: true,
@@ -41,20 +22,17 @@ export default function About() {
           }
         }}
       />
-      {scoped.styles}
       <style jsx>{`
         main {
           max-width: 1000px;
-          margin: 0 auto;
+          margin: 10vh auto;
           padding-bottom: 5vh;
-        }
-        header {
+          color: #ffffff;
           text-align: center;
-          display: block;
-          font-size: 2rem;
-          margin-block-start: 0.67em;
-          margin-block-end: 0.67em;
-          font-weight: bold;
+          font-size: 1.5rem;
+          letter-spacing: 2px;
+          cursor: default;
+          opacity: 0.8;
         }
       `}</style>
     </main>

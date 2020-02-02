@@ -8,10 +8,9 @@ export default function H2({ children, ...props }) {
         {`
           h2 {
             position: relative;
-            color: #333333;
+            color: #ffffff;
             font-weight: 600;
             font-size: 1.4rem;
-            font-family: 'Comic Sans MS', '楷体', cursive, sans-serif;
             margin: 10px 0;
             &:after {
               content: ' - h2';

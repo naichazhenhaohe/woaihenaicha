@@ -8,7 +8,6 @@ export default function InlineCode({ children, ...props }) {
         {`
           code {
             color: red;
-            background: #ffdddd;
             font-family: 'Comic Sans MS','微软雅黑',cursive,sans-serif;
           }
         `}

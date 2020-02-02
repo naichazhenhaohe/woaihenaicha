@@ -19,7 +19,6 @@ export default function Tags() {
   }
   return (
     <main>
-      <header>TAGS</header>
       <div className="sum">
         目前共计<span className="number">{Object.keys(Tags).length}</span>个标签
       </div>
@@ -36,22 +35,16 @@ export default function Tags() {
           margin: 0 auto;
           padding-bottom: 5vh;
         }
-        header {
-          text-align: center;
-          display: block;
-          font-size: 2rem;
-          margin-block-start: 0.67em;
-          margin-block-end: 0.67em;
-          font-weight: bold;
-        }
         .sum {
-          color: #555555;
+          margin: 5vh auto;
+          color: #ffffff;
           text-align: center;
-          font-size: 1.2rem;
+          font-size: 1.4rem;
         }
         .number {
           font-weight: 600;
           padding: 0 5px;
+          color: #ffee33;
         }
         .tags-box {
           margin-top: 20px;
@@ -60,7 +53,7 @@ export default function Tags() {
           justify-content: space-around;
         }
         .tag {
-          color: #444444;
+          color: #ffffff;
           font-size: 1.4rem;
           margin: 0 15px;
           padding-bottom: 5px;

@@ -22,7 +22,7 @@ export default function Root(props) {
       <style jsx>{`
         .markdown {
           font-size: 1.2rem;
-          color: #555555;
+          color: #ffffff;
           letter-spacing: 1px;
           cursor: default;
         }
@@ -84,6 +84,8 @@ export default function Root(props) {
           margin-block-start: 0.67em;
           margin-block-end: 0.67em;
           font-weight: bold;
+          color: #ffffff;
+          opacity: 0.9;
         }
         .tagBox {
           text-align: center;

@@ -28,17 +28,17 @@ export default function Progress() {
           appearance: none;
           border: none;
           background-color: transparent;
-          color: #99ccff;
+          color: #ffee33;
           &::-webkit-progress-bar {
             background-color: transparent;
           }
 
           &::-webkit-progress-value {
-            background-color: #99ccff;
+            background-color: #ffee33;
           }
 
           &::-moz-progress-bar {
-            background-color: #99ccff;
+            background-color: #ffee33;
           }
         }
       `}</style>

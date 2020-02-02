@@ -8,7 +8,7 @@ export default function H3({ children, ...props }) {
         {`
           h3 {
             margin: 10px 0;
-            color: #333333;
+            color: #ffffff;
             &:after {
               content: ' - h3';
               font-size: 1rem;

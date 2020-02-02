@@ -17,9 +17,9 @@ export default function Categories() {
   }
   return (
     <main>
-      <header>TAGS</header>
       <div className="sum">
-        目前共计<span className="number">{Object.keys(Categories).length}</span>个分类
+        Currently there are<span className="number">{Object.keys(Categories).length}</span>
+        categories
       </div>
       <div className="categories-box">
         {(Object.keys(Categories) || []).map(item => (
@@ -34,29 +34,24 @@ export default function Categories() {
           max-width: 1000px;
           margin: 0 auto;
           padding-bottom: 5vh;
-        }
-        header {
-          text-align: center;
-          display: block;
-          font-size: 2rem;
-          margin-block-start: 0.67em;
-          margin-block-end: 0.67em;
-          font-weight: bold;
+          letter-spacing: 2px;
         }
         .sum {
-          color: #555555;
+          margin: 5vh auto;
+          color: #ffffff;
           text-align: center;
-          font-size: 1.2rem;
+          font-size: 1.4rem;
         }
         .number {
           font-weight: 600;
           padding: 0 5px;
+          color: #ffee33;
         }
         .categories-box {
           margin-top: 20px;
         }
         .category {
-          color: #444444;
+          color: #ffffff;
           font-size: 1.4rem;
           padding-bottom: 15px;
           overflow-wrap: break-word;
