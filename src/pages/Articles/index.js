@@ -12,6 +12,7 @@ import Ul from '@com/articleTags/Ul'
 import Td from '@com/articleTags/Td'
 import Th from '@com/articleTags/Th'
 import Tr from '@com/articleTags/Tr'
+import Thead from '@com/articleTags/Thead'
 import Table from '@com/articleTags/Table'
 import InlineCode from '@com/articleTags/InlineCode'
 import Soda from '@com/articleDemos/Soda'
@@ -76,7 +77,8 @@ export default function Root(props) {
             td: Td,
             tr: Tr,
             th: Th,
-            table: Table
+            table: Table,
+            thead: Thead
           }
         }}
       />

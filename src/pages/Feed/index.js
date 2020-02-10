@@ -22,7 +22,7 @@ export default function Feed(props) {
       <style jsx>{`
         main {
           max-width: 1000px;
-          margin: 50px auto;
+          margin: 5vh auto;
         }
         .padding {
           padding: 5vh 5vw;

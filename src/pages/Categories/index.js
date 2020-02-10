@@ -1,5 +1,6 @@
 import React from 'react'
 import root from '@/articles/root.json'
+import isPhone from '@/utils/isPhone'
 
 export default function Categories() {
   const Categories = {}
@@ -16,7 +17,7 @@ export default function Categories() {
     }
   }
   return (
-    <main>
+    <main className={isPhone ? "" : "letterSpace"}>
       <div className="sum">
         Currently there are<span className="number">{Object.keys(Categories).length}</span>
         categories
@@ -34,6 +35,8 @@ export default function Categories() {
           max-width: 1000px;
           margin: 0 auto;
           padding-bottom: 5vh;
+        }
+        .letterSpace {
           letter-spacing: 2px;
         }
         .sum {
@@ -48,7 +51,7 @@ export default function Categories() {
           color: #ffee33;
         }
         .categories-box {
-          margin-top: 20px;
+          margin: 20px 20px 0;
         }
         .category {
           color: #ffffff;

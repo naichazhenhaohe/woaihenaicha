@@ -1,5 +1,6 @@
 import React from 'react'
 import root from '@/articles/root.json'
+import isPhone from '@/utils/isPhone'
 
 export default function Tags() {
   const Tags = {}
@@ -18,9 +19,9 @@ export default function Tags() {
     }
   }
   return (
-    <main>
+    <main className={isPhone ? "" : "letterSpace"}>
       <div className="sum">
-        目前共计<span className="number">{Object.keys(Tags).length}</span>个标签
+      Currently there are<span className="number">{Object.keys(Tags).length}</span>tags
       </div>
       <div className="tags-box">
         {(Object.keys(Tags) || []).map(item => (
@@ -35,6 +36,9 @@ export default function Tags() {
           margin: 0 auto;
           padding-bottom: 5vh;
         }
+        .letterSpace {
+          letter-spacing: 2px;
+        }
         .sum {
           margin: 5vh auto;
           color: #ffffff;
@@ -47,7 +51,7 @@ export default function Tags() {
           color: #ffee33;
         }
         .tags-box {
-          margin-top: 20px;
+          margin-top: -15px;
           display: flex;
           flex-flow: row wrap;
           justify-content: left;

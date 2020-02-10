@@ -11,7 +11,7 @@ export default function H1({ children, ...props }) {
             color: #ffffff;
             font-weight: 600;
             font-size: 1.8rem;
-            margin: 10px 0;
+            margin: 20px 0 10px;
             &:after {
               content: ' - h1';
               font-size: 1rem;
