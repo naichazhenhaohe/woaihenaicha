@@ -1,26 +1,31 @@
 import React from 'react'
 import root from '@/articles/root.json'
-import Box from './box'
+import Box from './Box'
+import isPhone from '@/utils/isPhone'
 
-export default function Feed() {
+export default function Feed(props) {
   return (
-    <main>
+    <main className={isPhone ? 'padding' : ''}>
       {root &&
-        root.map((item, index) => (
-          <Box
-            index={index}
-            loca={item.location}
-            name={item.name}
-            date={item.date}
-            tags={item.tags}
-            key={index}
-          />
-        ))}
+        root
+          .slice(0, props.showNumber)
+          .map((item, index) => (
+            <Box
+              index={index}
+              loca={item.location}
+              name={item.name}
+              date={item.date}
+              tags={item.tags}
+              key={index}
+            />
+          ))}
       <style jsx>{`
         main {
           max-width: 1000px;
           margin: 50px auto;
-          padding-bottom: 5vh;
+        }
+        .padding {
+          padding: 5vh 5vw;
         }
         article {
           display: flex;

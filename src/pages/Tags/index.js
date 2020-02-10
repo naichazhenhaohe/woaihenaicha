@@ -50,12 +50,13 @@ export default function Tags() {
           margin-top: 20px;
           display: flex;
           flex-flow: row wrap;
-          justify-content: space-around;
+          justify-content: left;
         }
         .tag {
           color: #ffffff;
           font-size: 1.4rem;
-          margin: 0 15px;
+          margin: 15px;
+          margin-bottom: 0;
           padding-bottom: 5px;
           cursor: pointer;
           overflow-wrap: break-word;

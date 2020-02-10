@@ -1,16 +1,21 @@
 import React, { useEffect } from 'react'
 import Markdown from 'markdown-to-jsx'
 import Prism from 'prismjs'
-import H1 from '@com/H1'
-import H2 from '@com/H2'
-import H3 from '@com/H3'
-import Paragraph from '@com/Paragraph'
-import Blockquote from '@com/Blockquote'
-import A from '@com/A'
-import Ol from '@com/Ol'
-import Ul from '@com/Ul'
-import InlineCode from '@com/InlineCode'
-import Img from '@com/Img'
+import H1 from '@com/articleTags/H1'
+import H2 from '@com/articleTags/H2'
+import H3 from '@com/articleTags/H3'
+import Paragraph from '@com/articleTags/Paragraph'
+import Blockquote from '@com/articleTags/Blockquote'
+import A from '@com/articleTags/A'
+import Ol from '@com/articleTags/Ol'
+import Ul from '@com/articleTags/Ul'
+import Td from '@com/articleTags/Td'
+import Th from '@com/articleTags/Th'
+import Tr from '@com/articleTags/Tr'
+import Table from '@com/articleTags/Table'
+import InlineCode from '@com/articleTags/InlineCode'
+import Soda from '@com/articleDemos/Soda'
+import Img from '@com/articleTags/Img'
 
 export default function Root(props) {
   const { state } = props.location
@@ -66,7 +71,12 @@ export default function Root(props) {
             ol: Ol,
             ul: Ul,
             inlineCode: InlineCode,
-            img: Img
+            img: Img,
+            soda: Soda,
+            td: Td,
+            tr: Tr,
+            th: Th,
+            table: Table
           }
         }}
       />

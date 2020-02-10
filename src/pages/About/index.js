@@ -1,9 +1,7 @@
 import React from 'react'
 import Markdown from 'markdown-to-jsx'
-import Paragraph from '@com/Paragraph'
-import A from '@com/A'
-import Ul from '@com/Ul'
-import Center from '@com/Center'
+import Paragraph from '@com/articleTags/Paragraph'
+import A from '@com/articleTags/A'
 
 export default function About() {
   const MAIN = require(`@/articles/about.md`).default || ''
@@ -16,9 +14,7 @@ export default function About() {
           forceBlock: true,
           overrides: {
             p: Paragraph,
-            a: A,
-            ul: Ul,
-            center: Center
+            a: A
           }
         }}
       />

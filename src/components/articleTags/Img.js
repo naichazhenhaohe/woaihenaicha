@@ -8,7 +8,11 @@ export default function Img({ ...props }) {
   return (
     <>
       <img {...props} src={image} alt="" />
-      <style jsx>{``}</style>
+      <style jsx>{`
+        img {
+          max-width: 100%;
+        }
+      `}</style>
     </>
   )
 }

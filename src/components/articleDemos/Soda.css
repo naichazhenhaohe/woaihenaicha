@@ -1,0 +1,118 @@
+.red {
+  box-shadow: 0px 0px 5px 0px rgba(232, 25, 87, 1), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.45),
+    inset 1px 0px 0px 0px rgba(255, 255, 255, 0.25),
+    inset -1px 0px 0px 0px rgba(255, 255, 255, 0.25);
+  background: rgb(255, 104, 149);
+}
+.green {
+  box-shadow: 0px 0px 5px 0px rgba(126, 234, 25, 1), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.45),
+    inset 1px 0px 0px 0px rgba(255, 255, 255, 0.25),
+    inset -1px 0px 0px 0px rgba(255, 255, 255, 0.25);
+  background: rgb(126, 234, 25);
+}
+.yellow {
+  box-shadow: 0px 0px 12px 0px rgba(229, 195, 25, 1),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.45), inset 1px 0px 0px 0px rgba(255, 255, 255, 0.25),
+    inset -1px 0px 0px 0px rgba(255, 255, 255, 0.25);
+  background: rgb(229, 195, 25);
+}
+.container {
+  width: 390px;
+  margin: 2vh auto;
+  color: #666;
+  box-shadow: 0 0px 0 #e5e5e5, 0 0 15px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px 20px;
+}
+.bar {
+  margin: 18px 0;
+}
+.text {
+  display: inline-block;
+}
+.top,
+.text {
+  margin-left: 12px;
+}
+.progress {
+  margin-top: 18px;
+  position: relative;
+  z-index: 5;
+  border: 1px solid rgba(222, 222, 222, 0.8);
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 5px 17px rgba(222, 222, 222, 0.5), 0 0 3px 1px rgba(222, 222, 222, 0.5) inset;
+}
+.progress,
+.progress-bar {
+  width: calc(100% - 2px);
+  height: 20px;
+}
+.progress-bar {
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  border-radius: 12px;
+  -moz-transition: width 0.2s linear;
+  -webkit-transition: width 0.2s linear;
+  -o-transition: width 0.2s linear;
+  transition: width 0.2s linear;
+}
+.progress.sparkle .progress-bar {
+  background-image: url(../../img/关于气泡水动画-trafficbar.png);
+  box-shadow: inset 0 -2px 2px rgba(255, 255, 255, 0.8), inset 0 2px 2px rgba(255, 255, 255, 0.8);
+  -webkit-animation: sparkle 1500ms linear infinite;
+  -moz-animation: sparkle 1500ms linear infinite;
+  -o-animation: sparkle 1500ms linear infinite;
+  animation: sparkle 1500ms linear infinite;
+}
+@-webkit-keyframes sparkle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -64px;
+  }
+}
+@-moz-keyframes sparkle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -64px;
+  }
+}
+@-o-keyframes sparkle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -64px;
+  }
+}
+@keyframes sparkle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -64px;
+  }
+}
+.cycle {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  vertical-align: sub;
+}
+.cycle span {
+  background-image: url(../../img/关于气泡水动画-trafficbar.png);
+  height: 100%;
+  width: 100%;
+  display: block;
+  -webkit-animation: sparkle 1500ms linear infinite;
+  -moz-animation: sparkle 1500ms linear infinite;
+  -o-animation: sparkle 1500ms linear infinite;
+  animation: sparkle 1500ms linear infinite;
+}

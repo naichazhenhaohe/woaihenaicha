@@ -11,7 +11,6 @@ function Box(props) {
   }
   return (
     <div className={ODD ? 'feed-box odd' : 'feed-box even'} onClick={() => handleClick(index)}>
-      {/* <div className={ODD ? 'feed-box odd' : 'feed-box even'}> */}
       <h2>{name}</h2>
       <div className="article-date">{date}</div>
       <div className="article-location">

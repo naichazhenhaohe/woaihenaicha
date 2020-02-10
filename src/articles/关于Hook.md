@@ -1,6 +1,6 @@
 Hooks ReactJs 的 16.8 新特性。  
 官方表示期望 Hook 成为编写组件的主要方式。  
-还有就是 Hook [fo͝ot]，参考 book 的读音。浩克是 Hulk(  
+还有就是 Hook [ho͝ok]，参考 book 的读音。浩克是 Hulk(  
 
 <!-- more -->
 
