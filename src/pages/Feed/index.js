@@ -2,6 +2,7 @@ import React from 'react'
 import root from '@/articles/root.json'
 import Box from './Box'
 import isPhone from '@/utils/isPhone'
+import ToSplatoon from '@com/ToSplatoon'
 
 export default function Feed(props) {
   return (
@@ -19,6 +20,7 @@ export default function Feed(props) {
               key={index}
             />
           ))}
+      {isPhone ? '' : <ToSplatoon />}
       <style jsx>{`
         main {
           max-width: 1000px;
@@ -69,13 +71,6 @@ export default function Feed(props) {
         .date {
           cursor: pointer;
           color: #bbbbbb;
-        }
-      `}</style>
-      <style jsx>{`
-        .title {
-          &::before {
-            block: ;
-          }
         }
       `}</style>
     </main>

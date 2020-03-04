@@ -9,11 +9,9 @@ function MobileHeader() {
           padding: 0 2vw;
           box-sizing: border-box;
           position: relative;
-          width: 100%;
           display: flex;
-          justify-content: center;
+          justify-content: space-around;
           align-items: center;
-          margin: 0 15px;
           height: 32px;
           color: #ff7755;
           cursor: pointer;
@@ -90,8 +88,11 @@ function MobileHeader() {
           font-weight: 600;
           display: flex;
           align-items: center;
+          justify-content: space-around;
           text-align: center;
           flex-flow: row nowrap;
+          width: 100vw;
+          overflow: hidden;
         }
       `}</style>
     </header>

@@ -67,7 +67,9 @@
     "webpack": "4.41.2",
     "webpack-dev-server": "3.9.0",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "4.3.1"
+    "workbox-webpack-plugin": "4.3.1",
+    "node-sass": "^4.13.1",
+    "styled-jsx-plugin-sass": "^1.0.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -91,9 +93,7 @@
   },
   "devDependencies": {
     "babel-plugin-prismjs": "^2.0.0",
-    "less": "^3.10.3",
-    "styled-components": "^4.4.1",
-    "styled-jsx-plugin-less": "^0.0.1-alpha.2"
+    "styled-components": "^4.4.1"
   },
   "jest": {
     "roots": [
@@ -154,19 +154,28 @@
         "styled-jsx/babel",
         {
           "plugins": [
-            "styled-jsx-plugin-less"
+            "styled-jsx-plugin-sass"
           ]
         }
       ],
       [
-        "prismjs", 
+        "prismjs",
         {
-          "languages": ["javascript", "css", "html", "jsx", "markup"],
-          "plugins": ["line-numbers", "show-language"],
+          "languages": [
+            "javascript",
+            "css",
+            "html",
+            "jsx",
+            "markup"
+          ],
+          "plugins": [
+            "line-numbers",
+            "show-language"
+          ],
           "theme": "okaidia",
           "css": true
         }
-    ]
+      ]
     ]
   }
 }

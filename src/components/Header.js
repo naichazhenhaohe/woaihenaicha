@@ -97,6 +97,7 @@ function Header() {
           font-size: 1.3rem;
           font-weight: 600;
           min-width: 1032px;
+          width: 100vw;
           overflow: hidden;
         }
         main {

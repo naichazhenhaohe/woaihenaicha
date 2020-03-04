@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react'
 import Markdown from 'markdown-to-jsx'
 import Prism from 'prismjs'
+
+import isPhone from '@/utils/isPhone'
+import { parse } from '@/utils/stringify'
+
 import H1 from '@com/articleTags/H1'
 import H2 from '@com/articleTags/H2'
 import H3 from '@com/articleTags/H3'
@@ -19,10 +23,13 @@ import Soda from '@com/articleDemos/Soda'
 import Img from '@com/articleTags/Img'
 
 export default function Root(props) {
-  const { state } = props.location
+  document.body.scrollTop = 0
+  const { search } = props.location
+  const state = parse(search)
   const MAIN = require(`@/articles/${state.name}.md`).default || ''
-  const TAGS = state.tags || []
+  const TAGS = state.tags.split(',') || []
   const TITLE = state.name || ''
+
   const scoped = resolveScopedStyles(
     <scope>
       <style jsx>{`
@@ -35,6 +42,7 @@ export default function Root(props) {
       `}</style>
     </scope>
   )
+
   function resolveScopedStyles(scope) {
     return {
       className: scope.props.className,
@@ -47,12 +55,12 @@ export default function Root(props) {
   })
 
   return (
-    <main>
+    <main className={isPhone ? 'mobile-main' : 'PC-main'}>
       <header>{TITLE}</header>
       <div className="tagBox">
         {TAGS &&
           TAGS.map((item, index) => (
-            <div className="tag" key={index}>
+            <div className={isPhone ? 'tag' : 'tag PC-tag'} key={index}>
               {item}
             </div>
           ))}
@@ -84,9 +92,14 @@ export default function Root(props) {
       />
       {scoped.styles}
       <style jsx>{`
-        main {
+        .PC-main {
           max-width: 1000px;
           margin: 0 auto;
+          padding-bottom: 5vh;
+        }
+        .mobile-main {
+          width: 90vw;
+          margin: 0 5vw;
           padding-bottom: 5vh;
         }
         header {
@@ -103,14 +116,19 @@ export default function Root(props) {
           text-align: center;
           margin: 20px 0;
         }
-        .tag {
-          display: inline-block;
-          background-color: #e9e9e9;
+        .PC-tag {
           letter-spacing: 1px;
-          border-radius: 5px;
           font-size: 1.3rem;
           height: 30px;
           line-height: 30px;
+        }
+        .tag {
+          display: inline-block;
+          background-color: #e9e9e9;
+          border-radius: 5px;
+          font-size: 1.1rem;
+          height: 25px;
+          line-height: 25px;
           padding: 0 5px;
           margin: 0 5px;
           position: relative;

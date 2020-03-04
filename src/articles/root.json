@@ -1,6 +1,13 @@
 [
   {
-    "name": "Sytled-JSX & PrismJs",
+    "name": "关于package.json",
+    "date": "February 16th, 2020",
+    "tags": ["configruation", "package.json"],
+    "category": "configruation",
+    "location": "Yiwu, China"
+  },
+  {
+    "name": "Sytled-JSX And PrismJs",
     "date": "January 6th, 2020",
     "tags": ["Sytled-JSX", "PrismJs", "ReactJs"],
     "category": "ReactJs",
@@ -49,7 +56,7 @@
     "location": "Hangzhou, China"
   },
   {
-    "name": "关于new&this&bind&call&apply",
+    "name": "关于 new, this, bind(), call(), apply()",
     "date": "August 11st, 2019",
     "tags": ["JavaScript", "New", "This", "Bind", "Call", "Apply"],
     "category": "JavaScript",

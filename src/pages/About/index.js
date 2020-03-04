@@ -22,7 +22,7 @@ export default function About() {
       <style jsx>{`
         main {
           max-width: 1000px;
-          margin: 10vh 20px;
+          margin: 10vh auto;
           padding-bottom: 5vh;
           color: #ffffff;
           text-align: center;
