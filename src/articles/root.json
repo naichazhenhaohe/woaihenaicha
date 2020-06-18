@@ -49,6 +49,27 @@
     "location": "Chongqing, China"
   },
   {
+    "name": "关于重绘和回流",
+    "date": "September 29th, 2019",
+    "tags": ["browser", "CSS"],
+    "category": "CSS",
+    "location": "Chongqing, China"
+  },
+  {
+    "name": "关于class",
+    "date": "September 24th, 2019",
+    "tags": ["JavaScript", "ES6", "class"],
+    "category": "JavaScript",
+    "location": "Chongqing, China"
+  },
+  {
+    "name": "关于JavaScript赋值语句",
+    "date": "September 23rd, 2019",
+    "tags": ["JavaScript", "assignment statement"],
+    "category": "JavaScript",
+    "location": "Chongqing, China"
+  },
+  {
     "name": "关于内存泄漏",
     "date": "September 22nd, 2019",
     "tags": ["JavaScript", "Cross domain"],
@@ -56,10 +77,17 @@
     "location": "Chongqing, China"
   },
   {
-    "name": "关于重绘和回流",
-    "date": "September 29th, 2019",
-    "tags": ["browser", "CSS"],
-    "category": "CSS",
+    "name": "关于browser-router的nginx配置问题",
+    "date": "September 21st, 2019",
+    "tags": ["ReactJs", "browser router", "nginx"],
+    "category": "ReactJs",
+    "location": "Chongqing, China"
+  },
+  {
+    "name": "关于git",
+    "date": "September 16th, 2019",
+    "tags": ["git"],
+    "category": "git",
     "location": "Chongqing, China"
   },
   {
@@ -81,6 +109,13 @@
     "date": "September 9th, 2019",
     "tags": ["JavaScript", "memory leak"],
     "category": "JavaScript",
+    "location": "Chongqing, China"
+  },
+  {
+    "name": "关于ReactJs生命周期",
+    "date": "August 19th, 2019",
+    "tags": ["ReactJs", "React Lifecycle"],
+    "category": "ReactJs",
     "location": "Chongqing, China"
   },
   {
