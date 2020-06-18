@@ -49,11 +49,46 @@
     "location": "Chongqing, China"
   },
   {
-    "name": "关于跨域",
-    "date": "Sept 9th, 2019",
-    "tags": ["JavaScript", "Cross-domain"],
+    "name": "关于内存泄漏",
+    "date": "September 22nd, 2019",
+    "tags": ["JavaScript", "Cross domain"],
     "category": "JavaScript",
-    "location":"Chongqing, China"
+    "location": "Chongqing, China"
+  },
+  {
+    "name": "关于重绘和回流",
+    "date": "September 29th, 2019",
+    "tags": ["browser", "CSS"],
+    "category": "CSS",
+    "location": "Chongqing, China"
+  },
+  {
+    "name": "关于ajax",
+    "date": "September 11st, 2019",
+    "tags": ["JavaScript", "ajax"],
+    "category": "JavaScript",
+    "location": "Chongqing, China"
+  },
+  {
+    "name": "关于事件代理",
+    "date": "September 11st, 2019",
+    "tags": ["JavaScript", "event bubbling", "event capturing"],
+    "category": "JavaScript",
+    "location": "Chongqing, China"
+  },
+  {
+    "name": "关于跨域",
+    "date": "September 9th, 2019",
+    "tags": ["JavaScript", "memory leak"],
+    "category": "JavaScript",
+    "location": "Chongqing, China"
+  },
+  {
+    "name": "关于深拷贝和浅拷贝",
+    "date": "August 17th, 2019",
+    "tags": ["JavaScript", "Deep copy", "shallow copy"],
+    "category": "JavaScript",
+    "location": "Chongqing, China"
   },
   {
     "name": "关于闭包",
@@ -133,4 +168,3 @@
     "location": "Chongqing, China"
   }
 ]
-
