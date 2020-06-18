@@ -15,5 +15,6 @@ here is the front-end source code of my blog
 - [x] Page 'About'
 - [x] migrate the blog
 - [x] generate blog page from md file
+- [ ] previous articles
 - [ ] complete Tag and Category page
-- [ ] 404 page
+- [ ] more funny thing

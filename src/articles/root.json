@@ -49,6 +49,13 @@
     "location": "Chongqing, China"
   },
   {
+    "name": "关于跨域",
+    "date": "Sept 9th, 2019",
+    "tags": ["JavaScript", "Cross-domain"],
+    "category": "JavaScript",
+    "location":"Chongqing, China"
+  },
+  {
     "name": "关于闭包",
     "date": "August 14th, 2019",
     "tags": ["JavaScript", "Closure"],
@@ -126,3 +133,4 @@
     "location": "Chongqing, China"
   }
 ]
+
