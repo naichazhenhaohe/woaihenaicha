@@ -14,7 +14,6 @@ const parse = (search = '') => {
   const res = {}
   if (search) {
     const options = decodeURI(search.substring(1)).split('&')
-    console.log(options)
     for (let option of options) {
       const entry = option.split('=')
       res[entry[0]] = entry[1]

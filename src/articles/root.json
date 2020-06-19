@@ -1,5 +1,12 @@
 [
   {
+    "name": "Symbol, Proxy and Reflect",
+    "date": "June 17th, 2020",
+    "tags": ["ES6", "Symbol", "Proxy", "Reflect"],
+    "category": "JavaScript",
+    "location": "Yiwu, China"
+  },
+  {
     "name": "关于package.json",
     "date": "February 16th, 2020",
     "tags": ["configruation", "package.json"],
@@ -87,7 +94,7 @@
     "name": "关于git",
     "date": "September 16th, 2019",
     "tags": ["git"],
-    "category": "git",
+    "category": "Git",
     "location": "Chongqing, China"
   },
   {
