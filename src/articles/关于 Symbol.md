@@ -1,8 +1,6 @@
-Symbol, Proxy 和 Reflect 都是 ES6 新增的属性 / 对象。
+Symbol 是 ES6 新增的属性类型。
 
 Symbol 作为第七原始类型(好像 Object 是不是原始类型一直挺有争议？)，表示独一无二的值。
-
-Proxy 对象可以理解为在目标对象前架设一个拦截层，外界访问本对象需要先通过本层拦截。
 
 Reflect 对象也是 ES6 为了操作对象而提供的新 API 。
 
@@ -19,13 +17,7 @@ Reflect 对象也是 ES6 为了操作对象而提供的新 API 。
 本文只是我最近太无聊了(又想继续来更博客所以)又翻出阮一峰大佬的这本书来看看  
 所以主要是对书中的内容的搬运(主要是搬运啦)和总结。
 
-# Symbol
-
-TypeScript 中对 Symbol 的支持同 ES6 。
-
-Symbol 表示独一无二的值，用于对象属性名时，可以从根本上防止属性名冲突。
-
-## 创建 Symbol
+# 创建 Symbol
 
 ```js
 let s = Symbol()
@@ -54,7 +46,7 @@ console.log(s1 === s2) // false
 console.log(s3 === s4) // false
 ```
 
-## 类型转换
+# 类型转换
 
 Symbol 值可以显示转换为字符串
 
@@ -81,7 +73,7 @@ console.log('symbol is ' + s) // TypeError
 console.log(`symbol is ${s}`) // TypeError
 ```
 
-## 作为对象属性名
+# 作为对象属性名
 
 Symbol 值作为对象属性名时，可以保证不会出现重复的属性名。
 
@@ -117,7 +109,7 @@ console.log(a[keyName]) //  'hello'
 console.log(a.keyName) //   undefined
 ```
 
-## 属性名的遍历
+# 属性名的遍历
 
 常规获取对象的属性名的方式有如下三种：
 
@@ -156,12 +148,12 @@ const obj = {
 console.log(Reflect.ownKeys(obj)) // ["foo", "bar", Symbol(s1), Symbol(s2)]
 ```
 
-## Symbol 的两个方法: Symbol.for() & Symbol.keyFor()
+# Symbol 的两个方法: Symbol.for() & Symbol.keyFor()
 
 长得很像  
 功能完全不同
 
-### Symbol.for()
+## Symbol.for()
 
 作用在于复用一个已登记的 Symbol 值 / 新建一个被登记的 Symbol
 
@@ -180,7 +172,7 @@ console.log(s1 === s2) // true
 console.log(s3 === s4) // false
 ```
 
-### Symbol.keyFor()
+## Symbol.keyFor()
 
 参数为 symbol 值，用于获取某个已登记的 Symbol 的描述信息。
 
@@ -195,11 +187,11 @@ console.log(Symbol.keyFor(s3)) // undefined
 
 可以看到以 Symbol.for() 创建的具有描述信息的 symbol 才适用 Symbol.keyFor()
 
-## ES6 内置的 Symbol
+# ES6 内置的 Symbol
 
 ES6 内置了 11 个 Symbol 值，指向语言内部的方法 / 属性。
 
-### Symbol.hasInstance
+## Symbol.hasInstance
 
 对象的 Symbol.hasInstance 方法在对象使用 instanceof 运算符时调用此方法，判断对象是否为某个构造函数的实例。
 
@@ -213,7 +205,7 @@ class DemoClass {
 console.log([1, 2] instanceof new DemoClass()) // true
 ```
 
-### Symbol.isConcatSpreadable
+## Symbol.isConcatSpreadable
 
 对象(虽然这里说的是对象，但是通常用在数组上)的 Symbol.isConcatSpreadable 表示对象使用 Array.prototype.concat() 时，是否要展开。
 
@@ -229,11 +221,11 @@ console.log(arr) // [1, 2, Symbol(Symbol.isConcatSpreadable): false]
 console.log(arr.length) // 2
 ```
 
-### Symbol.species
+## Symbol.species
 
 Symbol.species 属性指向当前对象的构造函数
 
-### Symbol.match
+## Symbol.match
 
 对象的 Symbol.match 属性指向某函数，当执行 str.match(myObject) 时，该属性存在则会调用该函数。
 
@@ -244,25 +236,25 @@ class MyMatcher {
 'e'.match(new MyMatcher()) // 1
 ```
 
-### Symbol.replace
+## Symbol.replace
 
 对象的 Symbol.replace 属性指向某函数，当对象被 String.prototype.replace 调用时，会调用本函数。
 
-### Symbol.search
+## Symbol.search
 
 对象的 Symbol.search 属性指向某函数，当对象被 String.prototype.search 调用时，会调用本函数。
 
-### Symbol.split
+## Symbol.split
 
 对象的 Symbol.split 属性指向某函数，当对象被 String.prototype.split 调用时，会调用本函数。
 
-### Symbol.iterator
+## Symbol.iterator
 
 指向目标对象的默认遍历器方法。
 
 对象在进行 for ... of 循环时，会调用 Symbol.iterator 方法返回该对象的默认遍历器。
 
-### Symbol.toPrimitive
+## Symbol.toPrimitive
 
 对象的 Symbol.toPrimitive 属性指向一个方法，对象在转为原始类型的值时会调用本方法，返回该对象对应的原始类型。
 
@@ -274,7 +266,7 @@ class MyMatcher {
 2. String。 转为字符串。
 3. Default。转为数值或者字符串。
 
-### Symbol.toStringTag
+## Symbol.toStringTag
 
 在对象上调用 Object.prototype.toString 方法时，若本属性存在，其返回值会出现在 toString 方法返回的字符串中，标识对象的类型。
 
@@ -282,8 +274,6 @@ class MyMatcher {
 console.log({ [Symbol.toStringTag]: 'foo' }.toString()) // [object foo]
 ```
 
-### Symbol.unscopables
+## Symbol.unscopables
 
 对象的 Symbol.unscopables 指向一个对象，指定了使用 with 关键字时哪些属性会被 with 环境排除。
-
-# Proxy

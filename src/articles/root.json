@@ -1,8 +1,15 @@
 [
   {
-    "name": "Symbol, Proxy and Reflect",
+    "name": "关于 Proxy",
+    "date": "June 19th, 2020",
+    "tags": ["ES6", "Proxy"],
+    "category": "JavaScript",
+    "location": "Yiwu, China"
+  },
+  {
+    "name": "关于 Symbol",
     "date": "June 17th, 2020",
-    "tags": ["ES6", "Symbol", "Proxy", "Reflect"],
+    "tags": ["ES6", "Symbol"],
     "category": "JavaScript",
     "location": "Yiwu, China"
   },
