@@ -1,219 +1,226 @@
 [
   {
+    "name": "关于 Reflect",
+    "date": "June 23rd, 2020",
+    "tags": ["ES6", "Reflect"],
+    "category": "JavaScript",
+    "location": "Yiwu"
+  },
+  {
     "name": "关于 Proxy",
     "date": "June 19th, 2020",
     "tags": ["ES6", "Proxy"],
     "category": "JavaScript",
-    "location": "Yiwu, China"
+    "location": "Yiwu"
   },
   {
     "name": "关于 Symbol",
     "date": "June 17th, 2020",
     "tags": ["ES6", "Symbol"],
     "category": "JavaScript",
-    "location": "Yiwu, China"
+    "location": "Yiwu"
   },
   {
     "name": "关于package.json",
     "date": "February 16th, 2020",
     "tags": ["configruation", "package.json"],
     "category": "configruation",
-    "location": "Yiwu, China"
+    "location": "Yiwu"
   },
   {
     "name": "Sytled-JSX And PrismJs",
     "date": "January 6th, 2020",
     "tags": ["Sytled-JSX", "PrismJs", "ReactJs"],
     "category": "ReactJs",
-    "location": "Beijing, China"
+    "location": "Beijing"
   },
   {
     "name": "2019 yearly review",
     "date": "December 29th, 2019",
     "tags": ["Review", "2019"],
     "category": "Review",
-    "location": "Beijing, China"
+    "location": "Beijing"
   },
   {
     "name": "关于computed传参",
     "date": "December 7th, 2019",
     "tags": ["VueJs"],
     "category": "VueJs",
-    "location": "Beijing, China"
+    "location": "Beijing"
   },
   {
     "name": "关于Vue-extend构造器应用",
     "date": "December 1st, 2019",
     "tags": ["VueJs"],
     "category": "VueJs",
-    "location": "Beijing, China"
+    "location": "Beijing"
   },
   {
     "name": "关于VsCode配置TypeScript",
     "date": "October 26th, 2019",
     "tags": ["VsCode", "TypeScript"],
     "category": "TypeScript",
-    "location": "Beijing, China"
+    "location": "Beijing"
   },
   {
     "name": "关于Hook",
     "date": "October 12nd, 2019",
     "tags": ["ReactJs", "Hook"],
     "category": "ReactJs",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于重绘和回流",
     "date": "September 29th, 2019",
     "tags": ["browser", "CSS"],
     "category": "CSS",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于class",
     "date": "September 24th, 2019",
     "tags": ["JavaScript", "ES6", "class"],
     "category": "JavaScript",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于JavaScript赋值语句",
     "date": "September 23rd, 2019",
     "tags": ["JavaScript", "assignment statement"],
     "category": "JavaScript",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于内存泄漏",
     "date": "September 22nd, 2019",
     "tags": ["JavaScript", "Cross domain"],
     "category": "JavaScript",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于browser-router的nginx配置问题",
     "date": "September 21st, 2019",
     "tags": ["ReactJs", "browser router", "nginx"],
     "category": "ReactJs",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于git",
     "date": "September 16th, 2019",
     "tags": ["git"],
     "category": "Git",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于ajax",
     "date": "September 11st, 2019",
     "tags": ["JavaScript", "ajax"],
     "category": "JavaScript",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于事件代理",
     "date": "September 11st, 2019",
     "tags": ["JavaScript", "event bubbling", "event capturing"],
     "category": "JavaScript",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于跨域",
     "date": "September 9th, 2019",
     "tags": ["JavaScript", "memory leak"],
     "category": "JavaScript",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于ReactJs生命周期",
     "date": "August 19th, 2019",
     "tags": ["ReactJs", "React Lifecycle"],
     "category": "ReactJs",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于深拷贝和浅拷贝",
     "date": "August 17th, 2019",
     "tags": ["JavaScript", "Deep copy", "shallow copy"],
     "category": "JavaScript",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于闭包",
     "date": "August 14th, 2019",
     "tags": ["JavaScript", "Closure"],
     "category": "JavaScript",
-    "location": "Hangzhou, China"
+    "location": "Hangzhou"
   },
   {
     "name": "关于 new, this, bind(), call(), apply()",
     "date": "August 11st, 2019",
     "tags": ["JavaScript", "New", "This", "Bind", "Call", "Apply"],
     "category": "JavaScript",
-    "location": "Hangzhou, China"
+    "location": "Hangzhou"
   },
   {
     "name": "关于原型",
     "date": "July 9th, 2019",
     "tags": ["JavaScript", "Proto"],
     "category": "JavaScript",
-    "location": "Yiwu, China"
+    "location": "Yiwu"
   },
   {
     "name": "关于ReactJS组件通讯",
     "date": "July 6th, 2019",
     "tags": ["ReactJs"],
     "category": "ReactJs",
-    "location": "Yiwu, China"
+    "location": "Yiwu"
   },
   {
     "name": "关于trans-",
     "date": "June 29th, 2019",
     "tags": ["CSS3"],
     "category": "CSS3",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于伪类和伪元素",
     "date": "June 27th, 2019",
     "tags": ["CSS3", "Pseudo Class", "Pseudo Elements"],
     "category": "CSS3",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于毛中特复习笔记",
     "date": "June 22nd, 2019",
     "tags": ["Review"],
     "category": "Review",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于JavaScript正则",
     "date": "June 17th, 2019",
     "tags": ["JavaScript", "RegExp"],
     "category": "JavaScript",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于气泡水动画",
     "date": "June 11st, 2019",
     "tags": ["CSS3", "Animation"],
     "category": "CSS3",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于eject报错",
     "date": "June 4th, 2019",
     "tags": ["ReactJs", "Error"],
     "category": "ReactJs",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   },
   {
     "name": "关于瀑布流布局",
     "date": "June 4th, 2019",
     "tags": ["CSS3", "Layout", "Waterfull Layout"],
     "category": "CSS3",
-    "location": "Chongqing, China"
+    "location": "Chongqing"
   }
 ]
