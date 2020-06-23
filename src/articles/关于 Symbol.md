@@ -1,3 +1,5 @@
+ES6, Symbol
+<!-- more --->
 Symbol 是 ES6 新增的属性类型。
 
 Symbol 作为第七原始类型(好像 Object 是不是原始类型一直挺有争议？)，表示独一无二的值。

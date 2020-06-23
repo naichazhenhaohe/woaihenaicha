@@ -1,3 +1,7 @@
+VsCode, TypeScript
+
+<!-- more --->
+
 VSCode 对 TypeScript 的支持做的很好。  
 在 VSCode 中实现对 TypeScript 进行自动编译和调试执行还是需要一些操作的。  
 纯粹是因为学 ts 的时候需要敲一些代码来看看才有了配置自动编译的需求哈，真实项目开发的时候好像也没有需要自动编译的需求。
@@ -25,7 +29,7 @@ VSCode 对 TypeScript 的支持做的很好。
 }
 ```
 
-更多的配置项看这里(tsconfig.json 配置项) → [编译选项](https://jkchao.github.io/typescript-book-chinese/project/compilationContext.html#%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9) 
+更多的配置项看这里(tsconfig.json 配置项) → [编译选项](https://jkchao.github.io/typescript-book-chinese/project/compilationContext.html#%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9)
 
 然后打开 VSCode 的 terminal ，输入如下代码：
 
@@ -96,7 +100,7 @@ SOF 这个问答... 其实对于我遇到的问题(虽然是同一个)没有起�
 
 cannot launch program \'filename.ts\' because corresponding javascript cannot be found
 
-发生原因：  
+发生原因：
 
 在看 <inlineCode>tsconfig.json</inlineCode> 的配置项的时候把 sourceMap 设置成了 false。
 

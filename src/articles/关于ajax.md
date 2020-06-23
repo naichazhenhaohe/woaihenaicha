@@ -1,3 +1,7 @@
+JavaScript, Ajax
+
+<!-- more --->
+
 Ajax 是 2005 年发布的一个技术，以 XMLHttpRequest 为核心，向服务器请求额外的数据而无需卸载页面
 
 虽然还是用的 axios 多一点啦
@@ -29,7 +33,7 @@ Ajax 通信与数据格式无关。
 IE7+、FireFox、Opera、Chrome 和 Safari 都支持原生的 XHR 对象，可以直接使用 XMLHttpRequest 的构造函数
 
 ```js
-const xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest()
 ```
 
 ## open() & send()
@@ -50,10 +54,10 @@ GET 请求不需要参数，POST 请求需要把 body 部分以字符串或者 F
 举个例子：
 
 ```js
-const xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest()
 // 只传两个参数，保持异步请求。
-xhr.open("get", "https://somewhere.com");
-xhr.send(null);
+xhr.open('get', 'https://somewhere.com')
+xhr.send(null)
 ```
 
 ## 请求结果
@@ -69,9 +73,9 @@ xhr.send(null);
 
 ```js
 if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
-  console.log(xhr.responseText);
+  console.log(xhr.responseText)
 } else {
-  console.log(`request failed: ${xhr.status}`);
+  console.log(`request failed: ${xhr.status}`)
 }
 ```
 
@@ -98,15 +102,15 @@ readyState 也是 XHR 对象的属性，有如下几个值：
 xhr.onreadystatechange = function() {
   if (xhr.readyState === 4) {
     if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
-      console.log(xhr.responseText);
+      console.log(xhr.responseText)
     } else {
-      console.log(`request failed: ${xhr.status}`);
+      console.log(`request failed: ${xhr.status}`)
     }
   }
-};
+}
 // 先定义监听事件再发送数据
-xhr.open("get", "https://somewhere.com");
-xhr.send(null);
+xhr.open('get', 'https://somewhere.com')
+xhr.send(null)
 ```
 
 ## abort()
@@ -120,16 +124,16 @@ xhr.send(null);
 使用 setRequestHeader() 方法可以设置自定义请求 header，要成功发送头部信息，必须在调用 open() 之后，send() 之前。
 
 ```js
-xhr.open("get", "https://somewhere.com");
-xhr.setRequestHeader("demoHeader", "demo");
-xhr.send(null);
+xhr.open('get', 'https://somewhere.com')
+xhr.setRequestHeader('demoHeader', 'demo')
+xhr.send(null)
 ```
 
 使用 getResponseHeader() 可以取得相应的头部信息，使用 getAllResponseHeaders() 可以获取到响应的所有 header 信息。
 
 ```js
-const demo = xhr.getReponseHeader("demoHeader");
-const allHeaders = xhr.getAllResponseHeaders();
+const demo = xhr.getReponseHeader('demoHeader')
+const allHeaders = xhr.getAllResponseHeaders()
 ```
 
 ## 跨域问题
@@ -144,13 +148,13 @@ jQuery 这么强，当然会对 Ajax 进行封装啦。
 
 ```js jQueyr 里的 Ajax
 $.ajax({
-  type: "POST",
+  type: 'POST',
   url: url,
   data: data,
   dataType: dataType,
   success: function() {},
   error: function() {}
-});
+})
 ```
 
 当然还有一些别的参数可以使用，不过最常用的内容就是上面这些。

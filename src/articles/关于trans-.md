@@ -1,61 +1,20 @@
-<style>
-.box {
-  text-align: center;
-  height: 200px;
-  overflow: auto;
-}
-.box div {
-  display: inline-block;
-  width: 100px;
-  height: 100px;  
-  line-height: 100px;
-  text-align: inherit;
-  margin-top: 5vh;
-}
-.red {
-  background-color: #f34141;
-  transform: scale(2);
-}
-.blue {
-  background-color: #41b9f3;
-}
-.green {
-  background-color: #2aea39;
-  transform: scale(-2);
-}
-.demo-3d-1,
-.demo-3d-2, 
-.demo-3d-3 {
-  width: 60px; 
-  height: 60px;
-  background-color: skyblue;
-}
-.demo-3d-2 {
-  width: 60px; 
-  height: 60px; 
-  background-color: pink;
-  transform: perspective(500px) translate3d(10px, 0, 100px);
-}
-.demo-3d-1 {
-  margin-top: 2vh;
-}
-.demo-3d-3 {
-  margin-bottom: 2vh;
-}
-</style>
+CSS3, Transition, Transfrom, Translate
+
+<!-- more --->
 
 # 一些说明
 
 trans- 指
-1. transition 
+
+1. transition
 2. transform
 3. translate() → 又包括 translateX() / translateY() / translateZ() / translate3d()
 
 # 相关链接
 
-[MDN文档: animation](https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation)
+[MDN 文档: animation](https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation)
 
-[MDN文档 - transition](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition)
+[MDN 文档 - transition](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition)
 
 [MDN：transform-function](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function)
 
@@ -63,7 +22,7 @@ trans- 指
 
 该属性也是一个复合(简写)属性。包括 transition-property，transition-duration，transition-timing-function 和 transition-delay 四个属性。
 
-简单来说，这个属性的作用，看起来和 animation 有一定的相似度(从效果和定义上来看，都是会动的(?)，以及一小部分属性值也很类似，具体的功能就是**允许CSS的属性值在一定的时间区间内平滑地过渡**。
+简单来说，这个属性的作用，看起来和 animation 有一定的相似度(从效果和定义上来看，都是会动的(?)，以及一小部分属性值也很类似，具体的功能就是**允许 CSS 的属性值在一定的时间区间内平滑地过渡**。
 
 ## transition-property
 
@@ -87,9 +46,9 @@ none 就是指没有过渡动画。
 }
 ```
 
-可以看到 transition-property 的属性值为 "margin-top" ，而 margin-top 就是需要过渡的属性名 
+可以看到 transition-property 的属性值为 "margin-top" ，而 margin-top 就是需要过渡的属性名
 
-上面这个例子中过渡的效果就是当 .demoDiv 被鼠标覆盖时 margin-top 会在 2s 内由 100px 变成 200px 
+上面这个例子中过渡的效果就是当 .demoDiv 被鼠标覆盖时 margin-top 会在 2s 内由 100px 变成 200px
 
 ## transition-duration
 
@@ -103,7 +62,7 @@ none 就是指没有过渡动画。
 
 ## transition-timing-function
 
-> CSS属性受到 transition effect的影响，会产生不断变化的中间值，而 CSS transition-timing-function 属性用来描述这个中间值是怎样计算的。实质上，通过这个函数会建立一条加速度曲线，因此在整个transition变化过程中，变化速度可以不断改变。
+> CSS 属性受到 transition effect 的影响，会产生不断变化的中间值，而 CSS transition-timing-function 属性用来描述这个中间值是怎样计算的。实质上，通过这个函数会建立一条加速度曲线，因此在整个 transition 变化过程中，变化速度可以不断改变。
 
 大概来说就是这个值会影响过渡动画进行时的变化速度。
 
@@ -114,7 +73,7 @@ none 就是指没有过渡动画。
 1. ease → 默认值
 2. ease-in
 3. ease-out
-4. ease-in-out  
+4. ease-in-out
 5. linear
 6. step-start
 7. step-end
@@ -123,7 +82,7 @@ none 就是指没有过渡动画。
 
 举两个例子：
 
-``` html
+```html
 <style type="text/css">
   .demo {
     width: 100px;
@@ -147,9 +106,11 @@ none 就是指没有过渡动画。
   <div class="blue demo">this is demo1</div>
 </body>
 ```
+
 <center>
 
 ![ease-in](/关于trans-ease-in.gif)
+
 </center>
 
 <center>图1  ease-in 的效果 </center>
@@ -157,6 +118,7 @@ none 就是指没有过渡动画。
 <center>
 
 ![ease-out](/关于trans-ease-out.gif)
+
 </center>
 
 <center>图2  ease-out 的效果 </center>
@@ -185,7 +147,7 @@ steps(n, end) 相对来说最为复杂(抛开 cubic-bezier 不谈)。 n 是整�
 
 规定了在过渡效果开始作用之前需要等待的时间。
 
-单位为 s / ms 
+单位为 s / ms
 
 默认值也是 0s 。默认不进行延迟。
 
@@ -195,26 +157,26 @@ steps(n, end) 相对来说最为复杂(抛开 cubic-bezier 不谈)。 n 是整�
 
 举个 MDN 的例子，例子进行了一些删减，删除了不相关的 CSS 属性
 
-``` css
+```css
 .box {
-  -webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
-  transition:width 2s, height 2s, background-color 2s, transform 2s;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 ```
 
 ## 触发条件
 
-触发条件主要有三个 
+触发条件主要有三个
 
 1. CSS 伪类触发。
-  比如上面举的例子的触发条件都是 :hover
+   比如上面举的例子的触发条件都是 :hover
 2. 媒体查询触发
-  @meida 当窗口尺寸变动时触发。
-3. JavaScript触发
-  上面有提到 transform 也是可以使用过渡的
+   @meida 当窗口尺寸变动时触发。
+3. JavaScript 触发
+   上面有提到 transform 也是可以使用过渡的
 
-``` html
-<div id='transistion'></div>
+```html
+<div id="transistion"></div>
 <style>
   window.onload = function() {
     let div = document.getElementById('transistion')
@@ -227,7 +189,7 @@ steps(n, end) 相对来说最为复杂(抛开 cubic-bezier 不谈)。 n 是整�
 
 transform 属性允许旋转，缩放，倾斜或平移给定元素
 
-这是通过修改CSS视觉格式化模型的坐标空间(?)来实现的。
+这是通过修改 CSS 视觉格式化模型的坐标空间(?)来实现的。
 
 transform 属性也可以使用 transition 进行过渡
 
@@ -254,6 +216,7 @@ transform 属性也可以使用 transition 进行过渡
 <center style='transform: rotate(-3deg); margin-bottom: 5vh;'>
 
 ![ss-salmon-run](/关于trans-ss-salmon-run.jpg)
+
 </center>
 
 ↑ 上面这张图用到了 "transform: rotate(-3deg)" 这条样式语句。
@@ -270,35 +233,35 @@ transform 属性也可以使用 transition 进行过渡
 
 ```html
 <style>
-.box {
-  text-align: center;
-  height: 200px;
-  overflow: auto;
-}
-.box div {
-  display: inline-block;
-  line-height: 100px;
-  width: 100px;
-  height: 100px;
-  text-align: inherit;
-  margin-top: 5vh;
-}
-.red {
-  background-color: #f34141;
-  transform: scale(2);
-}
-.blue {
-  background-color: #41b9f3;
-}
-.green {
-  background-color: #2aea39;
-  transform: scale(-2);
-}
+  .box {
+    text-align: center;
+    height: 200px;
+    overflow: auto;
+  }
+  .box div {
+    display: inline-block;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    text-align: inherit;
+    margin-top: 5vh;
+  }
+  .red {
+    background-color: #f34141;
+    transform: scale(2);
+  }
+  .blue {
+    background-color: #41b9f3;
+  }
+  .green {
+    background-color: #2aea39;
+    transform: scale(-2);
+  }
 </style>
-<div class='box'>
-  <div class='demo red' > demo 1</div>
-  <div class='demo blue' > demo 2</div>
-  <div class='demo green' > demo 3</div>
+<div class="box">
+  <div class="demo red">demo 1</div>
+  <div class="demo blue">demo 2</div>
+  <div class="demo green">demo 3</div>
 </div>
 ```
 
@@ -320,17 +283,17 @@ scale() 是仅适用于在二维平面上的变换的。
 
 ## skew( )
 
-前面的 rotate() 和 scale() 分别用于旋转和依据x/y\[/z]轴修改大小。
+前面的 rotate() 和 scale() 分别用于旋转和依据 x/y\[/z]轴修改大小。
 
 而这个函数实现的功能则是歪斜变换。
 
-与 scale() 类似， skew() 也可看成是 skewX(ax) 与skewY(ay) 的合成函数。
+与 scale() 类似， skew() 也可看成是 skewX(ax) 与 skewY(ay) 的合成函数。
 
 有两个参数 ax / ay 表示在每个方向的倾斜量。
 
-**注意：**与 scale() 的两个参数不同的是，当 skew() 函数只有一个参数是，默认 ay 等于0 而不是默认 ay 等于ax
+**注意：**与 scale() 的两个参数不同的是，当 skew() 函数只有一个参数是，默认 ay 等于 0 而不是默认 ay 等于 ax
 
->该变换是剪切（指的是会损失像素点）映射（横向），其在水平和垂直方向上将像素点扭曲一定角度。每个点的坐标根据新点与指定角度成比例的值和到原点的距离决定;因此，距离原点越远，添加的值就越大。
+> 该变换是剪切（指的是会损失像素点）映射（横向），其在水平和垂直方向上将像素点扭曲一定角度。每个点的坐标根据新点与指定角度成比例的值和到原点的距离决定;因此，距离原点越远，添加的值就越大。
 
 ax 和 ay 的值与 rotate() 参数一致，用于表示角度，单位为 deg / grad / rad /turn
 
@@ -356,8 +319,8 @@ transform-origin 的属性值有可以有一、二、三个。分别代表 x 轴
 
 1. translate()
 2. translateX()
-2. translateY()
-3. translate3d()
+3. translateY()
+4. translate3d()
 5. translateZ()
 
 和 rotate() 很像，有 x/y/z 以及 3d 版本。
@@ -375,11 +338,11 @@ tx / ty 就是常规的长度数据，单位可以是 em / px / vh 等等。
 举个例子：
 
 ```html
-<div style='width: 60px; height: 60px; background-color: #f34141;'>demo 1</div>
-<div style='width: 60px; height: 60px; background-color: #41b9f3; transform: translate(20px,5px)'>
+<div style="width: 60px; height: 60px; background-color: #f34141;">demo 1</div>
+<div style="width: 60px; height: 60px; background-color: #41b9f3; transform: translate(20px,5px)">
   Moved demo 2
 </div>
-<div style='width: 60px; height: 60px; background-color: #2aea39;'>demo 3</div>
+<div style="width: 60px; height: 60px; background-color: #2aea39;">demo 3</div>
 ```
 
 <div style='width: 60px; height: 60px; background-color: #f34141;'>demo 1</div>
@@ -392,22 +355,23 @@ translate3d(tx,ty,tz) 具有三个参数，相比 translate() 多了 tz 参数�
 
 举一个例子：
 
-```html 
-<div class='demo-3d-1'>demo 1</div>
-<div class='demo-3d-2'>Moved demo 2</div>
-<div class='demo-3d-3'>demo 3</div>
+```html
+<div class="demo-3d-1">demo 1</div>
+<div class="demo-3d-2">Moved demo 2</div>
+<div class="demo-3d-3">demo 3</div>
 ```
+
 ```css
 .demo-3d-1,
-.demo-3d-2, 
+.demo-3d-2,
 .demo-3d-3 {
-  width: 60px; 
+  width: 60px;
   height: 60px;
   background-color: skyblue;
 }
 .demo-3d-2 {
-  width: 60px; 
-  height: 60px; 
+  width: 60px;
+  height: 60px;
   background-color: pink;
   transform: perspective(500px) translate3d(10px, 0, 100px);
 }
@@ -426,6 +390,6 @@ translate() 可以说是 translateX(tx) / translateY(ty) 的复合函数
 
 两个函数的区别如同 rotate() / scale() 一样，不带 3d 字眼时，作用于二维平面。
 
-那这里就不在多介绍 X/Y/Z三个子函数(应该不能称为子函数，但是应该也能理解到是什么hhh)了。
+那这里就不在多介绍 X/Y/Z 三个子函数(应该不能称为子函数，但是应该也能理解到是什么 hhh)了。
 
 好嘞，那收工啦！

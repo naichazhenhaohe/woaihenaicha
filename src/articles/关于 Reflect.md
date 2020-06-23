@@ -1,3 +1,5 @@
+ES6, Reflect
+<!-- more --->
 同 Proxy 一致，Reflect 也是 ES6 新增的对象，用于操作对象。
 
 # 参考内容

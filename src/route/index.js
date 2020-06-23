@@ -12,7 +12,7 @@ import Tags from '@page/Tags'
 import Categories from '@page/Categories'
 import isPhone from '@/utils/isPhone'
 
-export default function App() {
+export default function App () {
   const [showNumber, setShowNumber] = useState(5)
   return (
     <>
@@ -27,7 +27,7 @@ export default function App() {
           <Switch>
             <Route path="/" exact render={() => <Feed showNumber={showNumber} />} />
             <Route path="/about" component={About} />
-            <Route path="/article" component={Article} />
+            <Route path="/article/:title" component={Article} />
             <Route path="/tags" component={Tags} />
             <Route path="/categories" component={Categories} />
           </Switch>

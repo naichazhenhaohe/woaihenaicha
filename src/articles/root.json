@@ -21,13 +21,6 @@
     "location": "Yiwu"
   },
   {
-    "name": "关于package.json",
-    "date": "February 16th, 2020",
-    "tags": ["configruation", "package.json"],
-    "category": "configruation",
-    "location": "Yiwu"
-  },
-  {
     "name": "Sytled-JSX And PrismJs",
     "date": "January 6th, 2020",
     "tags": ["Sytled-JSX", "PrismJs", "ReactJs"],
@@ -44,14 +37,14 @@
   {
     "name": "关于computed传参",
     "date": "December 7th, 2019",
-    "tags": ["VueJs"],
+    "tags": ["VueJs", "Computed"],
     "category": "VueJs",
     "location": "Beijing"
   },
   {
     "name": "关于Vue-extend构造器应用",
     "date": "December 1st, 2019",
-    "tags": ["VueJs"],
+    "tags": ["VueJs", "Extend"],
     "category": "VueJs",
     "location": "Beijing"
   },
@@ -72,63 +65,63 @@
   {
     "name": "关于重绘和回流",
     "date": "September 29th, 2019",
-    "tags": ["browser", "CSS"],
+    "tags": ["Browser", "CSS"],
     "category": "CSS",
     "location": "Chongqing"
   },
   {
     "name": "关于class",
     "date": "September 24th, 2019",
-    "tags": ["JavaScript", "ES6", "class"],
+    "tags": ["JavaScript", "ES6", "Class"],
     "category": "JavaScript",
     "location": "Chongqing"
   },
   {
     "name": "关于JavaScript赋值语句",
     "date": "September 23rd, 2019",
-    "tags": ["JavaScript", "assignment statement"],
+    "tags": ["JavaScript", "Assignment Statement"],
     "category": "JavaScript",
     "location": "Chongqing"
   },
   {
     "name": "关于内存泄漏",
     "date": "September 22nd, 2019",
-    "tags": ["JavaScript", "Cross domain"],
+    "tags": ["JavaScript", "Memory Leak"],
     "category": "JavaScript",
     "location": "Chongqing"
   },
   {
     "name": "关于browser-router的nginx配置问题",
     "date": "September 21st, 2019",
-    "tags": ["ReactJs", "browser router", "nginx"],
+    "tags": ["ReactJs", "Browser Router", "Nginx"],
     "category": "ReactJs",
     "location": "Chongqing"
   },
   {
     "name": "关于git",
     "date": "September 16th, 2019",
-    "tags": ["git"],
+    "tags": ["Git"],
     "category": "Git",
     "location": "Chongqing"
   },
   {
     "name": "关于ajax",
     "date": "September 11st, 2019",
-    "tags": ["JavaScript", "ajax"],
+    "tags": ["JavaScript", "Ajax"],
     "category": "JavaScript",
     "location": "Chongqing"
   },
   {
     "name": "关于事件代理",
     "date": "September 11st, 2019",
-    "tags": ["JavaScript", "event bubbling", "event capturing"],
+    "tags": ["JavaScript", "Event Bubbling", "Event Capturing"],
     "category": "JavaScript",
     "location": "Chongqing"
   },
   {
     "name": "关于跨域",
     "date": "September 9th, 2019",
-    "tags": ["JavaScript", "memory leak"],
+    "tags": ["JavaScript", "Cross Domain"],
     "category": "JavaScript",
     "location": "Chongqing"
   },
@@ -177,7 +170,7 @@
   {
     "name": "关于trans-",
     "date": "June 29th, 2019",
-    "tags": ["CSS3"],
+    "tags": ["CSS3", "Transition", "Translate", "Transfrom"],
     "category": "CSS3",
     "location": "Chongqing"
   },

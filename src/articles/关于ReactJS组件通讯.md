@@ -1,3 +1,5 @@
+ES6, Proxy
+<!-- more --->
 # 父组件向子组件传值
 
 ## props

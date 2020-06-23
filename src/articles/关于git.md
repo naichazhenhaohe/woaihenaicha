@@ -1,3 +1,7 @@
+Git
+
+<!-- more --->
+
 # 参考连接/书籍
 
 [话说 Svn 与 Git 的区别](https://www.jianshu.com/p/bfec042349ca)  
@@ -17,11 +21,11 @@
 
 2. 上手难度  
    个人觉得 Git 远难于 SVN。  
-   Git 的指令多，常见的有 clone / add / commit / status / log / fetch / pull / push /  rebase / branc / checkout 等，很多指定还有很多的选项。
-   SVN 的话我记得当时是必须先 update，再 commit(但是在 windows 上 SVN 真的是傻瓜式操作。  
+   Git 的指令多，常见的有 clone / add / commit / status / log / fetch / pull / push / rebase / branc / checkout 等，很多指定还有很多的选项。
+   SVN 的话我记得当时是必须先 update，再 commit(但是在 windows 上 SVN 真的是傻瓜式操作。
 
 3. 存储方式  
-   Git 按元数据(?)方式存储，而 SVN 按照文件存储。  
+   Git 按元数据(?)方式存储，而 SVN 按照文件存储。
 
 4. branch  
    SVN 无本地 branch (?因为又看到网路上的文献说其实有，但是也没有深入的说，所以保留意见  
@@ -40,7 +44,7 @@
 
 其实在进行项目之前，需要先对 git 环境进行一些配置。
 
-``` markup
+```markup
 $ git config [--global] user.name "Your Name"
 $ git config [--global] user.email "YourEmailAddress@xxx.com"
 ```
@@ -70,7 +74,7 @@ git mv 给仓库文件重命名。
 
 **请一定要带上 -m 选项**，如下
 
-``` markup
+```markup
 git commit -m "add: add something"
 ```
 
@@ -116,7 +120,7 @@ git show \<code\>
 虽然有 --soft / --mixed 两个其他的选项。  
 但是好像通常只用 --hard 。  
 commit_id 就是 git log 里的那个 commit 的识别码。  
-用于撤销 commit (或者说版本回退  
+用于撤销 commit (或者说版本回退
 
 ## git checkout
 
@@ -131,7 +135,7 @@ git checkout \<branch_name\>切换到 branch_name 这个分支
 
 指令用于关联本地仓库以及 GitHub(或者其他)上的远程仓库。
 
-``` markup
+```markup
 $ git remote add origin git@github.com:yourGithubName/yourRepositoryName.git
 ```
 
@@ -141,7 +145,7 @@ $ git remote add origin git@github.com:yourGithubName/yourRepositoryName.git
 
 但是我的习惯是
 
-``` markup
+```markup
 $ git push --set-upstream origin master
 // 以后的push就可以直接
 $ git push origin master
@@ -182,7 +186,7 @@ git branch \<branch_name\> 新建名为 branch_name 的分支
 
 其实 git checkout 也可以用于创建分支
 
-``` markup
+```markup
 // 新建分支并前往
 $ git checkout -b \<branch_name\>
 ```
@@ -203,7 +207,7 @@ git switch \<branch_name\> 切换到名为 branch_name 的分支
 在 git stash 之后 git status 会发现工作区是干净的。
 
 git stash list 查看被存储的 stash 列表  
-git stash apply \<stash_name\> 用于恢复某个指定的 stash，恢复之后于 stash list 里依旧存在   
+git stash apply \<stash_name\> 用于恢复某个指定的 stash，恢复之后于 stash list 里依旧存在  
 git stash drop \<branch_name\> 用户删除某个 stash  
 git stash pop \<branch_name\> 用于恢复并删除某个 stash
 
@@ -214,7 +218,7 @@ git stash pop \<branch_name\> 用于恢复并删除某个 stash
 所以把 dev 用 git stash 存储了。  
 修好了 master 之后提交了新的代码，恢复了 dev 之后，dev 里 bug 依旧存在。  
 但是又不能直接 merge master 给 dev。  
-git cherry-pick \<commit_id\> 就能把提交的内容添加到 dev 里。准确的说  
+git cherry-pick \<commit_id\> 就能把提交的内容添加到 dev 里。准确的说
 
 > Git 自动给 dev 分支做了一次提交，注意这次提交的 commit 是 1d4b803，它并不同于 master 的 4c805e2，因为这两个 commit 只是改动相同，但确实是两个不同的 commit。用 git cherry-pick，我们就不需要在 dev 分支上手动再把修 bug 的过程重复一遍。
 
@@ -222,14 +226,14 @@ git cherry-pick \<commit_id\> 就能把提交的内容添加到 dev 里。准确
 
 用于跟新本地代码。  
 出现 git push 失败，说明远程分支比本地分支更新，所以现需要 git pull 一下。  
-git pull 有冲突先于本地修正，再提交。  
+git pull 有冲突先于本地修正，再提交。
 
 如果提示 no tracking information 则本地分支与远程分支没有建立连接。可以使用 git push 里提到的 --set-upstream 选项。
 
 ## git merge & git rebase
 
 git merge 用于合并指定的分支到当前所在的分支。  
-每次 merge 都会自动创建一个新的 commit，如果合并的时候遇到冲突，则只须要解决冲突后重新提交即可。但是每次 merge 都会有一个 commit，分支会很混乱。  
+每次 merge 都会自动创建一个新的 commit，如果合并的时候遇到冲突，则只须要解决冲突后重新提交即可。但是每次 merge 都会有一个 commit，分支会很混乱。
 
 ![merge](/merge.png)
 

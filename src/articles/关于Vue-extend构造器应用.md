@@ -1,10 +1,14 @@
+VueJs, Extend
+
+<!-- more --->
+
 因为刚入坑 VueJs  
 有一些很酷的的代码  
-在撸公司源代码的时候看到下面这两行  
+在撸公司源代码的时候看到下面这两行
 
 ```js
-const Extend = Vue.extend({ ...(data || {}) });
-const Content = new Extend().$mount();
+const Extend = Vue.extend({ ...(data || {}) })
+const Content = new Extend().$mount()
 ```
 
 觉得特别有意思(只要是对 extend 不是很熟，又看到了直接 new 了一个\$monent())哈，就比较仔细的看了一下。
@@ -14,28 +18,28 @@ const Content = new Extend().$mount();
 # 相关链接
 
 [Vue.extend(options)](https://cn.vuejs.org/v2/api/#Vue-extend)  
-[vm.\$mount([elementOrSelector])](https://cn.vuejs.org/v2/api/#vm-mount)  
+[vm.\$mount([elementOrSelector])](https://cn.vuejs.org/v2/api/#vm-mount)
 
 ↑ 两个主要函数的官方 API 文档。其实没什么帮助哈，还有一个\$el 忘记并懒得引用了。
 
 # 相关代码
 
 ```js
-function renderComponent({ el = "body", data = {} }) {
-  const Extend = Vue.extend({ ...(data || {}) });
-  const Content = new Extend().$mount();
+function renderComponent({ el = 'body', data = {} }) {
+  const Extend = Vue.extend({ ...(data || {}) })
+  const Content = new Extend().$mount()
   if (el.nodeName) {
-    el.append(Content.$el);
+    el.append(Content.$el)
   } else {
-    document.querySelector(el).appendChild(Content.$el);
+    document.querySelector(el).appendChild(Content.$el)
   }
-  return Content;
+  return Content
 }
 ```
 
 代码用于一个叫 vue-orgchart 的组件。  
 这个组件用于生成树状卡片，然后代码里的 renderComponent() 函数是作为生成卡片的代码的一部分。  
-所以目的也很明确就是生成或者说渲染组件(虽然函数名就能看出来 hhh  
+所以目的也很明确就是生成或者说渲染组件(虽然函数名就能看出来 hhh
 
 其实代码也有一些很奇怪的地方。。比如 data 参数已经默认为{}了为什么还要在给给 Vue.extend()传参的时候再进行一次判断。就很迷哈，小细节就不处理了。
 
@@ -47,8 +51,8 @@ if 语句块就是判断一下传入的 el 参数是否为真实节点，是的�
 
 ```js
 // 修改了 ...(data||{}) 为 ...data
-const Extend = Vue.extend({ ...data });
-const Content = new Extend().$mount();
+const Extend = Vue.extend({ ...data })
+const Content = new Extend().$mount()
 ```
 
 好玩的还是这两行代码。
@@ -98,14 +102,14 @@ VueComponent {_uid: 25, _isVue: true, $options: {…}, _renderProxy: Proxy, _sel
 
 ```js
 Vue.prototype.$mount = function(el, hydrating) {
-  el = el && query(el);
+  el = el && query(el)
 
   // resolve template/el and convert to render function
   // 接下来的一些代码解析了模版以及el并转到渲染函数
   // 就是其实和 el / hydrating / mount 无关，这仨就没出现过
 
-  return mount.call(this, el, hydrating);
-};
+  return mount.call(this, el, hydrating)
+}
 ```
 
 返回了一个 mount 的调用。。。

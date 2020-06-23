@@ -1,3 +1,7 @@
+Sytled-JSX, PrismJs, ReactJs
+
+<!-- more --->
+
 最近弃用了 Hexo  
 想自己搭建一个 blog  
 开发过程中因为好学~~(其实是作死)~~  

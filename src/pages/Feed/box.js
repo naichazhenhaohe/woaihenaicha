@@ -2,13 +2,12 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import root from '@/articles/root.json'
 import LocationLogo from '@/img/8186b60.png'
-import { stringify } from '@/utils/stringify'
 
-function Box(props) {
+function Box (props) {
   const { index, name, date, tags, loca: location } = props
   const ODD = +index % 2 !== 0
-  function handleClick(index) {
-    props.history.push(`/article?${stringify(root[index])}`)
+  function handleClick (index) {
+    props.history.push(`/article/${root[index].name}`)
   }
   return (
     <div className={ODD ? 'feed-box odd' : 'feed-box even'} onClick={() => handleClick(index)}>

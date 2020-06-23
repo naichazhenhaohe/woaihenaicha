@@ -1,3 +1,7 @@
+ReactJs, Error
+
+<!-- more --->
+
 之前遇到的一个问题，对于新建的 react 项目进行 eject 的时候会进行报错，需要运行三条 git 指令之后才能顺利的 yarn eject。
 
 # 错误信息

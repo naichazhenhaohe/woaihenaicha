@@ -1,8 +1,10 @@
+ReactJs, Hook
+
+<!-- more --->
+
 Hooks ReactJs 的 16.8 新特性。  
 官方表示期望 Hook 成为编写组件的主要方式。  
-还有就是 Hook [ho͝ok]，参考 book 的读音。浩克是 Hulk(  
-
-<!-- more -->
+还有就是 Hook [ho͝ok]，参考 book 的读音。浩克是 Hulk(
 
 # 参考链接
 
@@ -11,14 +13,14 @@ Hooks ReactJs 的 16.8 新特性。
 [React：useHooks 小窍门](https://mp.weixin.qq.com/s/ER6HQRLiD5KwtQtY4xriMw) ← 一些自定义的 Hooks  
 [How to use useReducer in React Hooks for performance optimization](https://medium.com/crowdbotics/how-to-use-usereducer-in-react-hooks-for-performance-optimization-ecafca9e7bf5)  
 [Making setInterval Declarative with React Hooks](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)  
-[useMemo 与 useCallback 使用指南](https://zhuanlan.zhihu.com/p/66166173)  
+[useMemo 与 useCallback 使用指南](https://zhuanlan.zhihu.com/p/66166173)
 
 # Hooks 简介
 
 ReactJs v16.8 的新特性。  
 在之前用 ReactJs 来写组件用的最多的就是类组件和函数组件。最主要的区别就是类组件提供了包括一系列的生命周期函数以及 state 在内的一些的特性。  
 [Hooks 的动机](https://zh-hans.reactjs.org/docs/hooks-intro.html#motivation)官方给了描述。  
-主要解决如下三方面的问题：  
+主要解决如下三方面的问题：
 
 1. 很难在组件之间复用状态逻辑
 2. 难以理解复杂的组件
@@ -56,14 +58,14 @@ useState 这个 Hook 就是帮助在函数组件里使用 state。
 useState 会返回两个值，当前状态(或者说初始值)以及用于更新这个 state 的函数。
 
 ```js
-import React, { useState } from "react";
+import React, { useState } from 'react'
 export default function Demo() {
-  const [demo, setDemo] = useState(123);
+  const [demo, setDemo] = useState(123)
   // demo 就是一个 state 变量
   // setDemo 就是用于修改 demo 的值的函数
   // useState 的参数 123 就是 state 的初始值
-  setDemo(234); // 修改 demo 的值为 234
-  return <div>{demo}</div>;
+  setDemo(234) // 修改 demo 的值为 234
+  return <div>{demo}</div>
 }
 ```
 
@@ -75,7 +77,7 @@ export default function Demo() {
 
 ```js
 function Counter({ initialCount }) {
-  const [count, setCount] = useState(initialCount);
+  const [count, setCount] = useState(initialCount)
   return (
     <>
       Count: {count}
@@ -83,31 +85,31 @@ function Counter({ initialCount }) {
       <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
       <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
     </>
-  );
+  )
 }
 ```
 
 # useEffect
 
 处理副操作的 Hook。  
-可以把 useEffect 这个 Hook 看做是 componentDidMount 和 componentDidUpdate 以及 componentWillUnmount 这三个函数的组合。  
+可以把 useEffect 这个 Hook 看做是 componentDidMount 和 componentDidUpdate 以及 componentWillUnmount 这三个函数的组合。
 
 **通过 useEffect 告诉 React 在渲染之后需要执行那些操作，React 会报错作为 useEffect 参数的这个函数，并在每次执行 DOM 更新之后调用它。默认情况下，在第一次挂载渲染以及之后每次的更新渲染都会执行。**
 
 ```js
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 function Example() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
   // 这里的作用类似于 componentDidMount 和 componentDidUpdate:
   useEffect(() => {
-    document.title = `You clicked ${count} times`;
-  });
+    document.title = `You clicked ${count} times`
+  })
   return (
     <div>
       <p>You clicked {count} times</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
-  );
+  )
 }
 ```
 
@@ -120,17 +122,17 @@ function Example() {
 ```js
 // 不需要清除的副操作
 useEffect(() => {
-  document.title = `You clicked ${count} times`;
-});
+  document.title = `You clicked ${count} times`
+})
 // 需要清除的副操作
 useEffect(() => {
   let interval = setInterval(() => {
     // do something
-  }, 1000);
+  }, 1000)
   return () => {
-    clearInterval(interval);
-  };
-});
+    clearInterval(interval)
+  }
+})
 ```
 
 例子中的计时器是需要在组件卸载的时候进行清除的。  
@@ -148,8 +150,8 @@ useEffect(() => {
 
 ```js
 useEffect(() => {
-  document.title = `You clicked ${count} times`;
-}, [count]); // 仅在 count 更改时更新
+  document.title = `You clicked ${count} times`
+}, [count]) // 仅在 count 更改时更新
 ```
 
 如果两次渲染，作为 useEffect 的第二个参数的这个数组里的内容**都是**一直的，则 React 会跳过这个 effect 从而实现优化。
@@ -169,16 +171,16 @@ Context 对象值为上层组件中距离当前组件最近的\<ContextName.Prov
 // 作为 context 值的对象。
 const themes = {
   light: {
-    foreground: "#000000",
-    background: "#eeeeee"
+    foreground: '#000000',
+    background: '#eeeeee'
   },
   dark: {
-    foreground: "#ffffff",
-    background: "#222222"
+    foreground: '#ffffff',
+    background: '#222222'
   }
-};
+}
 
-const ThemeContext = React.createContext(themes.light);
+const ThemeContext = React.createContext(themes.light)
 
 function App() {
   return (
@@ -186,7 +188,7 @@ function App() {
     <ThemeContext.Provider value={themes.dark}>
       <Toolbar />
     </ThemeContext.Provider>
-  );
+  )
 }
 
 function Toolbar(props) {
@@ -194,17 +196,15 @@ function Toolbar(props) {
     <div>
       <ThemedButton />
     </div>
-  );
+  )
 }
 
 function ThemedButton() {
   // 获取上层组件中声明的context
-  const theme = useContext(ThemeContext);
+  const theme = useContext(ThemeContext)
   return (
-    <button style={{ background: theme.background, color: theme.foreground }}>
-      I am styled by theme context!
-    </button>
-  );
+    <button style={{ background: theme.background, color: theme.foreground }}>I am styled by theme context!</button>
+  )
 }
 ```
 
@@ -213,31 +213,31 @@ function ThemedButton() {
 [useReducer](https://zh-hans.reactjs.org/docs/hooks-reference.html#usereducer)  
 [How to use useReducer in React Hooks for performance optimization](https://medium.com/crowdbotics/how-to-use-usereducer-in-react-hooks-for-performance-optimization-ecafca9e7bf5)  
 某种程度上来说，useState 也是 useReducer 的一种。  
-如果熟悉 redux 的话，关于 useReducer 的理解就很容易。如果不熟悉 redux 的话，当然先去熟悉下 redux 啦。  
+如果熟悉 redux 的话，关于 useReducer 的理解就很容易。如果不熟悉 redux 的话，当然先去熟悉下 redux 啦。
 
 ```js
-const initialState = { count: 0 };
+const initialState = { count: 0 }
 function reducer(state, action) {
   switch (action.type) {
-    case "increment":
-      return { count: state.count + 1 };
-    case "decrement":
-      return { count: state.count - 1 };
+    case 'increment':
+      return { count: state.count + 1 }
+    case 'decrement':
+      return { count: state.count - 1 }
     default:
-      throw new Error();
+      throw new Error()
   }
 }
 function Counter() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState)
   // 或者可以直接使用如下代码
   // const [state, dispatch] = useReducer(reducer, { count: 0 });
   return (
     <>
       Count: {state.count}
-      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
     </>
-  );
+  )
 }
 ```
 
@@ -253,15 +253,15 @@ useReducer 的参数第一个是一个 reducer 函数，第二个参数是 store
 
 如果不知道 memoized 的话回想一下 React.memo 的作用，不知道 React.memo 的话...  
 → ReactJS 官方给的链接：[Memoization](https://en.wikipedia.org/wiki/Memoization)  
-→ 我觉得看这个就够了：[React.memo](https://zh-hans.reactjs.org/docs/react-api.html#reactmemo)  
+→ 我觉得看这个就够了：[React.memo](https://zh-hans.reactjs.org/docs/react-api.html#reactmemo)
 
 ```js 语法
 // useCallback
 const memoizedCallback = useCallback(() => {
-  doSomething(a, b);
-}, [a, b]);
+  doSomething(a, b)
+}, [a, b])
 // useMemo
-const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b])
 ```
 
 useMemo 把\"创建\"函数和依赖项作为参数，返回一个 memozied 值，仅当某个依赖项改变时才会重新计算返回值。  
@@ -285,16 +285,16 @@ useCallback 把内联函数以及依赖作为参数，返回值为这个函数�
 
 ```js
 function TextInputWithFocusButton() {
-  const inputEl = useRef(null);
+  const inputEl = useRef(null)
   const onButtonClick = () => {
-    inputEl.current.focus();
-  };
+    inputEl.current.focus()
+  }
   return (
     <>
       <input ref={inputEl} type="text" />
       <button onClick={onButtonClick}>Focus the input</button>
     </>
-  );
+  )
 }
 ```
 
@@ -304,16 +304,16 @@ function TextInputWithFocusButton() {
 
 ```js
 function Timer() {
-  const intervalRef = useRef();
+  const intervalRef = useRef()
   useEffect(() => {
     const id = setInterval(() => {
       // ...
-    });
-    intervalRef.current = id;
+    })
+    intervalRef.current = id
     return () => {
-      clearInterval(intervalRef.current);
-    };
-  });
+      clearInterval(intervalRef.current)
+    }
+  })
   // ...
 }
 ```
@@ -321,7 +321,7 @@ function Timer() {
 # 自定义 Hook
 
 [自定义 Hook](https://zh-hans.reactjs.org/docs/hooks-custom.html)  
-[Hooks FAQ](https://zh-hans.reactjs.org/docs/hooks-faq.html)  
+[Hooks FAQ](https://zh-hans.reactjs.org/docs/hooks-faq.html)
 
 看了官方对于自定义 Hook 的描述，可以感觉到自定义 Hook 是针对解决组件间状态逻辑复用的问题的，而也就是这样，才会有知乎上一大堆类\"Hooks 能不能取代 Redux\"问题。
 
